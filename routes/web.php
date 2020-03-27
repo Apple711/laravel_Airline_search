@@ -40,10 +40,10 @@ Route::get("/upload", 'UploadController@index');
 Route::post("/upload/import", 'UploadController@import')->name('import');;
 
 // Airline Routes
-Route::get("Airline", 'AirlineController@index');
-Route::get("/airline/edit/{company_name}/{country}", 'AirlineController@edit');
-Route::post("/airline/store", 'AirlineController@store');
-Route::get('/airline/delete/{company_name}/{country}', 'AirlineController@destroy');
+Route::get("Airline", 'AirLineController@index');
+Route::get("/airline/edit/{company_name}/{country}", 'AirLineController@edit');
+Route::post("/airline/store", 'AirLineController@store');
+Route::get('/airline/delete/{company_name}/{country}', 'AirLineController@destroy');
 
 //Contact Routes
 Route::post('/contact/delete', 'ContactController@destroy');
