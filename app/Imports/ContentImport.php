@@ -27,8 +27,10 @@ class ContentImport implements ToModel, WithChunkReading, WithBatchInserts, With
                 $insert_data[$fillable[$key]] = $value;
             }
         }
-        
-        return new Airline($insert_data);
+        $results = Airline::where($insert_data)->get();
+        if ( $results->isEmpty() ){
+            return new Airline($insert_data);
+        }
     }
     public function chunkSize(): int
     {

@@ -54,7 +54,7 @@ class LoginController extends Controller
             'password' => 'required|string|min:6'
           ]);
          
-          $user = User::where (['email' => $request->email,'is_active' =>1])->get();
+          $user = User::where (['email' => $request->email])->get();
           $user_count = $user->count();
           
           if ($validator->passes()) {

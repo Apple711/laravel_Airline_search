@@ -21,13 +21,13 @@ class UserController extends Controller
     public function index()
     {
         $users = DB::table('users');
-        $users = $users->join('roles', 'users.role', '=', 'roles.id');
-        $users = $users->select('users.*', 'roles.title');
+        // $users = $users->join('roles', 'users.role', '=', 'roles.id');
+        // $users = $users->select('users.*', 'roles.title');
         // if (Auth::user()->role == 2) {
         //     $users = $users->where('users.role', 3);
         // }
         // $users = $users->where('users.role', '<>', 4);
-        $users = $users->orderBy("users.role")->paginate(15);
+        $users = $users->paginate(15);
 
         return view('admin.users.index', compact('users'));
     }
@@ -46,7 +46,7 @@ class UserController extends Controller
         $user->email = $request['email'];
         $user->phone = $request['phone'];
         $user->role = $request['role'];
-        $user->password = bcrypt("123456");
+        $user->password = bcrypt($request['password']);
         $user->save();
         return redirect('admin/users');
 

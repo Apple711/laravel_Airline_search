@@ -59,9 +59,9 @@
     <!-- Logo -->
     <a href="{{url('admin')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>S</b>earch</span>
+      {{-- <span class="logo-mini"><b>S</b>earch</span> --}}
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b></span>
+      {{-- <span class="logo-lg"><b>Admin</b></span> --}}
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -74,7 +74,7 @@
         <ul class="nav navbar-nav">
           <li class="">
             <a href="#" class="dropdown-toggle">
-              <span class="hidden-xs"></span>
+              <span class="hidden-xs">{{Auth::user()->firstname}} {{Auth::user()->lastname}}</span>
             </a>
           </li>
           <li class="">
@@ -99,9 +99,25 @@
     <section class="sidebar">
       <ul class="sidebar-menu">
         <li><a href="{{url('/')}}"><i class="fa fa-dollar"></i> <span>PUSH REQ</span></a></li>
+        @if(Auth::user()->role == 1)
+          <li class="treeview {{$user ? 'active' : ''}}">
+            <a href="#">
+              <i class="fa fa-edit"></i> <span>CRM</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu {{$user ? 'menu-open' : ''}}">
+              <li @if($menu_name == 'users') class="active" @endif><a href="{{url('/admin/users')}}"><i class="fa fa-circle-o"></i> User Management</a></li>
+              <li @if($menu_name == 'visit') class="active" @endif><a href="{{url('/admin/visit')}}"><i class="fa fa-circle-o"></i> Visit Report</a></li>
+            </ul>
+          </li>
+        @endif
         <li><a href="{{url('/MRO')}}"><i class="fa fa-dollar"></i> <span>MRO MANAGEMENT</span></a></li>
         <li><a href="{{url('/Airline')}}"><i class="fa fa-dollar"></i> <span>AIRLINE MANAGEMENT</span></a></li>
+        @if(Auth::user()->role == 1)
         <li><a href="{{url('/upload')}}"><i class="fa fa-dollar"></i> <span>UPLOAD FLEET</span></a></li>
+        @endif
       </ul>
     </section>
     <!-- /.sidebar -->

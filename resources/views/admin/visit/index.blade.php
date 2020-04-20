@@ -4,9 +4,10 @@
 <script>
     function edit(obj) {
         var id = obj.parent().parent().attr("item_id");
-        var url = "{{ url('admin/users') }}";
+        var url = "{{ url('admin/visit') }}";
         location.href=url + "/" + id + "/edit";
     }
+
 
 </script>
 <div class="content-wrapper" style="min-height: 916px;">
@@ -14,7 +15,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Users
+            VISIT REPORT
         </h1>
     </section>
 
@@ -26,7 +27,7 @@
                 <div class="box account_list">
                   
                     <div class="box-header with-border">
-                        <a href="{{url('/admin/users/create')}}" class="btn btn-info ">Add New</a>
+                        <a href="{{url('/admin/visit/create')}}" class="btn btn-info ">Add New</a>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
@@ -36,30 +37,17 @@
                                     <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
                                         <thead>
                                             <tr role="row">
-                                                <th style="width: 15%;">First Name</th>
-                                                <th style="width: 15%;">Last Name</th>
-                                                <th style="width: 15%;">Email</th>
-                                                <th style="width: 10%;">Phone</th>
-                                                <th style="width: 10%;">Role</th>
-                                                <th style="width: 10%;">Date</th>
+                                                <th style="width: 15%;">REPORT OWNER</th>
+                                                <th style="width: 15%;">ATTENDESS</th>
+                                                <th style="width: 15%;">DATE</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
-                                            @foreach ($users as $tr)
+                                            @foreach ($visits as $tr)
                                                
                                                 <tr class="gradeA odd" item_id="<?php echo $tr->id ?>">
-                                                    <td class=" ">{{$tr->firstname}}</td>
-                                                    <td class=" ">{{$tr->lastname }}</td>
-                                                    <td class=" ">{{$tr->email }}</td>
-                                                    <td class=" ">{{$tr->phone }}</td>
-                                                    <td class=" ">
-                                                        @if($tr->role==1)
-                                                            Admin
-                                                        @else
-                                                            General
-                                                        @endif
-                                                    </td>
+                                                    <td class=" ">{{$tr->reportowner}}</td>
+                                                    <td class=" ">{{$tr->attendess }}</td>
                                                     <td class=" ">{{$tr->created_at }}</td>
 
                                                     <td class="center ">
@@ -72,18 +60,6 @@
                                         </tbody>
                                     </table>
 
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="dataTables_info" id="dataTables-example_info" role="alert" aria-live="polite" aria-relevant="all">Tatal <?php echo $users->total() ?> counts</div>
-
-                                        </div>
-                                         <div class="col-sm-9 ">
-                                            <div  id="dataTables-example_paginate" style="float:right">
-                                                <?php echo $users->render(); ?>
-
-                                            </div>
-                                        </div> 
-                                    </div>
                                    
                                 </div>
                             </div>

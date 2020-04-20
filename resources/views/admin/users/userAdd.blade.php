@@ -66,15 +66,8 @@
                                     <!-- <input class="form-control" name="email" type="text" value="" placeholder="Email" required> -->
 
                                     <select class = "form-control" name = "role" requried>
-                                        @foreach ($roles as $role)
-                                            @if(Auth::user()->role == 2)
-                                                @if($role->id == 3)
-                                                <option value= {{$role->id}}>{{$role->title}}</option>
-                                                @endif
-                                            @else
-                                                <option value= {{$role->id}}>{{$role->title}}</option>
-                                            @endif
-                                        @endforeach
+                                        <option value= "0">General</option>
+                                        <option value= "1">Admin</option>
                                     </select>
                                 </div>
                             </div>
