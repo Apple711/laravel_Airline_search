@@ -67,7 +67,7 @@
                     </tr>
                 @endforeach
                 @php
-                    $mailchain.= ($i==0) ? $tr->email : ":".$tr->email;
+                    $mailchain.= ($i==0) ? $tr->email : "; ".$tr->email;
                     $i++;
                 @endphp
             @endif

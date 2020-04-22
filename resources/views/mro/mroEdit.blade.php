@@ -102,11 +102,19 @@
                                     </div>
                                     <div class="col-md-4" style="height:350px;overflow-y: scroll;">
                                         <table id="destination_list" class="table" role="grid" aria-describedby="example1_info">
+                                            <thead>
+                                                <tr>
+                                                    <td>Application</td>
+                                                    <td>Product Family</td>
+                                                </tr>
+                                            </thead>
                                             <tbody>
                                                 @if ( count($appLists)>0 )
                                                     @foreach($appLists as $tr)
                                                         <tr class="gradeA odd">
                                                             <td><input type='hidden' value='{{$tr->id}}' name='app_list[]'/>{{$tr->application}}<td>
+                                                            <td>{{$tr->family}}<td>
+                                                            <td><a onclick='del_app($(this))' class='button button-small' title='Delete'><i class='fa fa-trash'></i></a><td>
                                                         </tr>
                                                     @endforeach
                                                 @endif
@@ -185,6 +193,9 @@
         e.preventDefault();
         $("#destination_list tbody").html("");
     })
+    function del_app(obj) {
+        obj.parent().parent().remove();
+    }
 
     function del(obj) {
         var id = obj.parent().parent().attr("item_id");

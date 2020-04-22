@@ -91,6 +91,12 @@
                                     </div>
                                     <div class="col-md-4" style="height:350px;overflow-y: scroll;">
                                         <table id="destination_list" class="table" role="grid" aria-describedby="example1_info">
+                                            <thead>
+                                                <tr>
+                                                    <td>Application</td>
+                                                    <td>Product Family</td>
+                                                </tr>
+                                            </thead>
                                             <tbody>
                                                 
                                             </tbody>
@@ -130,7 +136,7 @@
         var contact_name = $("#contact_name").val();
         var contact_email = $("#contact_email").val();
         var contact_title = $("#contact_title").val();
-        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
+        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a onclick='del($(this))' class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
     });
 
     $("#product_sel").change(function(){
@@ -154,16 +160,20 @@
     $("#add-app").click(function(e){
         e.preventDefault();
         var xml = "";
+        var product = $("#product_sel option:selected").html();
         $('#source_list > tbody  > tr').each(function(index, tr) { 
             var selected = tr.firstChild.firstChild.checked;
             if (selected) {
-                xml = "<tr id='"+tr.getAttribute('id')+"'><td><input type='hidden' value='"+tr.getAttribute('id')+"' name='app_list[]'/>"+tr.getElementsByTagName('td')[1].innerText+"<td></tr>";
+                xml = "<tr id='"+tr.getAttribute('id')+"'><td><input type='hidden' value='"+tr.getAttribute('id')+"' name='app_list[]'/>"+tr.getElementsByTagName('td')[1].innerText+"</td><td>"+product+"</td><td><a onclick='del($(this))' class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>";
                 $("#destination_list tbody").append(xml);
                 tr.firstChild.firstChild.checked = false;
             }
         });
         
-        
     })
+
+    function del(obj) {
+        obj.parent().parent().remove();
+    }
 </script>
 @endsection

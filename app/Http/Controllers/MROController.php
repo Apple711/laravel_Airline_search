@@ -34,10 +34,10 @@ class MROController extends Controller
         $contacts = Contact::where('companyid', '=', $id)->get();
 
         $appidLists = explode(',',$company->applist);
-        $appLists = Application::where('id',$appidLists[0]);
+        $appLists = Application::join('products', 'applications.productid', '=', 'products.id')->select('applications.*','products.family')->where('applications.id',$appidLists[0]);
         
         for ( $i=1; $i<count($appidLists); $i++){
-            $appLists = $appLists->orwhere('id',$appidLists[$i]);
+            $appLists = $appLists->orwhere('applications.id',$appidLists[$i]);
         }
         $appLists = $appLists->get();
         $products = Product::all();

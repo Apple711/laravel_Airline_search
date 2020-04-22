@@ -117,6 +117,18 @@
         <li><a href="{{url('/Airline')}}"><i class="fa fa-dollar"></i> <span>AIRLINE MANAGEMENT</span></a></li>
         @if(Auth::user()->role == 1)
         <li><a href="{{url('/upload')}}"><i class="fa fa-dollar"></i> <span>UPLOAD FLEET</span></a></li>
+        <li class="treeview {{$user ? 'active' : ''}}">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>SETTING</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu {{$user ? 'menu-open' : ''}}">
+            <li @if($menu_name == 'products') class="active" @endif><a href="{{url('/admin/products')}}"><i class="fa fa-circle-o"></i> PRODUCT Management</a></li>
+            <li @if($menu_name == 'applications') class="active" @endif><a href="{{url('/admin/applications')}}"><i class="fa fa-circle-o"></i> APPLICATION MANAGEMENT</a></li>
+          </ul>
+        </li>
         @endif
       </ul>
     </section>

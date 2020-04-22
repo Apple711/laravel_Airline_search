@@ -65,5 +65,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     //admin visit report
     Route::resource('/admin/visit', 'Admin\VisitReportController');
+
+    // product and application routes
+    Route::resource('admin/products', 'Admin\ProductController');
+    Route::get('admin/products/delete/{id}', 'Admin\ProductController@destroy');
+
+    Route::resource('admin/applications', 'Admin\ApplicationController');
+    Route::get('admin/applications/delete/{id}', 'Admin\ApplicationController@destroy');
   
 });
