@@ -173,7 +173,10 @@
     })
 
     function del(obj) {
-        obj.parent().parent().remove();
+        var retVal = confirm("Are you going to remove this application?");
+        if ( retVal == true ){
+            obj.parent().parent().remove();
+        }
     }
 </script>
 @endsection

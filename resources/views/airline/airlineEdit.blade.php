@@ -167,22 +167,29 @@
     });
 
     function del(obj) {
-        var id = obj.parent().parent().attr("item_id");
-        $.ajax({
-            type:'POST',
-            url:'/contact/delete',
-            data:{id: id},
-            success:function(data){
-                if(data == "true"){
-                    delelement = obj.parent().parent();
-                    delelement.remove();
+        var retVal = confirm("Are you going to remove this contact?");
+        if ( retVal == true ){
+            var id = obj.parent().parent().attr("item_id");
+            $.ajax({
+                type:'POST',
+                url:'/contact/delete',
+                data:{id: id},
+                success:function(data){
+                    if(data == "true"){
+                        delelement = obj.parent().parent();
+                        delelement.remove();
+                    }
                 }
-            }
-        });
+            });
+        }    
+        
     }
 
     function del_new(obj) {
-        obj.parent().parent().remove();
+        var retVal = confirm("Are you going to remove this contact?");
+        if ( retVal == true ){
+            obj.parent().parent().remove();
+        }
     }
 </script>
 @endsection
