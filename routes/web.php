@@ -61,7 +61,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/airline/delete/{company_name}/{country}', 'AirLineController@destroy');
 
     //Contact Routes
+    Route::resource('contacts', 'ContactController');
+    Route::get('/contacts/{id}/{type}/edit', 'ContactController@edit');
     Route::post('/contact/delete', 'ContactController@destroy');
+    Route::post('/contacts/update/{id}/{type}', 'ContactController@store');
 
     //admin visit report
     Route::resource('/admin/visit', 'Admin\VisitReportController');

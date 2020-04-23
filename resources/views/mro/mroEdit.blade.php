@@ -155,7 +155,7 @@
         var contact_name = $("#contact_name").val();
         var contact_email = $("#contact_email").val();
         var contact_title = $("#contact_title").val();
-        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
+        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a onclick='del_new($(this))' class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
     });
 
     $("#product_sel").change(function(){
@@ -210,6 +210,10 @@
                 }
             }
         });
+    }
+
+    function del_new(obj) {
+        obj.parent().parent().remove();
     }
 
     $(".back_button").click(function(){

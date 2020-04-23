@@ -10,6 +10,13 @@
             "ordering": false
         } );
     })
+
+    function edit(obj) {
+        var id = obj.parent().parent().attr("item_id");
+        var type = obj.parent().parent().find(':nth-child(8)')[0].innerText;
+        var url = "{{ url('/contacts') }}";
+        location.href=url + "/" + id + "/" + type + "/edit";
+    }
 </script>
 <table id="resulttable" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
     <thead>
@@ -36,7 +43,7 @@
         @endphp
         @if ( count($results)>0 )
             @foreach ($results as $tr)
-                <tr class="gradeA odd">
+                <tr class="gradeA odd" item_id="<?php echo $tr->id ?>">
                     <td class=""><input type="checkbox" /></td>
                     <td class=" ">{{$customer_type=='airline' ? $tr->operator : $tr->company}}</td>
                     <td class=" ">{{$tr->email }}</td>
@@ -45,9 +52,10 @@
                     <td class=" ">{{$application->application}}</td>
                     <td class=" "></td>
                     <td class=" ">{{$customer_type=='airline' ? 'Airline' : 'MRO'}}</td>
+                    <td><a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a></td>
                 </tr>
                 @php
-                    $mailchain.= ($i==0) ? $tr->email : ":".$tr->email;
+                    $mailchain.= ($i==0) ? $tr->email : "; ".$tr->email;
                     $i++;
                 @endphp
             @endforeach
@@ -55,7 +63,7 @@
         @if ( $customer_type == "all" )
             @if ( count($airline_results)>0 )
                 @foreach ($airline_results as $tr)
-                    <tr class="gradeA odd">
+                    <tr class="gradeA odd" item_id="<?php echo $tr->id ?>">
                         <td class=""><input type="checkbox" /></td>
                         <td class=" ">{{$tr->operator}}</td>
                         <td class=" ">{{$tr->email}}</td>
@@ -64,6 +72,7 @@
                         <td class=" ">{{$application->application}}</td>
                         <td class=" "></td>
                         <td class=" ">Airline</td>
+                        <td><a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a></td>
                     </tr>
                 @endforeach
                 @php

@@ -52,7 +52,7 @@
                                                     <td class=" ">{{$tr->email }}</td>
                                                     <td class=" ">{{$tr->title }}</td>
                                                     <td class="center ">
-                                                        <a href="{{ url('/contact/delete/'.$tr->id)}}" data-method="delete" class='button button-small' title='Delete'><i class='fa fa-trash'></i></a>  
+                                                        <a onclick="del($(this))" data-method="delete" class='button button-small' title='Delete'><i class='fa fa-trash'></i></a>  
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -149,17 +149,40 @@
 </div>
 <!-- /.content-wrapper -->
 <script>
-    
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $(".add-row").click(function(e){
         e.preventDefault();
         var contact_name = $("#contact_name").val();
         var contact_email = $("#contact_email").val();
         var contact_title = $("#contact_title").val();
-        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
+        $("#contact_table tbody").append("<tr><td><input type='hidden' value='"+contact_name+"' name='contact_name[]' />"+contact_name+"</td><td><input type='hidden' value='"+contact_email+"' name='contact_email[]' />"+contact_email+"</td><td><input type='hidden' value='"+contact_title+"' name='contact_title[]' />"+contact_title+"</td><td><a onclick='del_new($(this))' class='button button-small' title='Delete'><i class='fa fa-trash'></i></a></td></tr>");
     });
 
     $(".back_button").click(function(){
         location.href = "{{URL::to('Airline')}}"
     });
+
+    function del(obj) {
+        var id = obj.parent().parent().attr("item_id");
+        $.ajax({
+            type:'POST',
+            url:'/contact/delete',
+            data:{id: id},
+            success:function(data){
+                if(data == "true"){
+                    delelement = obj.parent().parent();
+                    delelement.remove();
+                }
+            }
+        });
+    }
+
+    function del_new(obj) {
+        obj.parent().parent().remove();
+    }
 </script>
 @endsection

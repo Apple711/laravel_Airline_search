@@ -98,7 +98,7 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <ul class="sidebar-menu">
-        <li><a href="{{url('/')}}"><i class="fa fa-dollar"></i> <span>PUSH REQ</span></a></li>
+        <li><a href="{{url('/')}}"><i class="fa fa-dollar"></i> <span>Push RFP</span></a></li>
         @if(Auth::user()->role == 1)
           <li class="treeview {{$user ? 'active' : ''}}">
             <a href="#">
