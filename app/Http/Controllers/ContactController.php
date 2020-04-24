@@ -19,16 +19,12 @@ class ContactController extends Controller
         return "true";
     }
 
-    public function edit($id, $type)
+    public function edit($id, $company_name, $type)
     {
         if ($type == "MRO"){
-            $results = Mrocompany::where('id',$id)->get()->first();
             $contacts = Contact::where('companyid', '=', $id)->get();
-            $company_name = $results['company'];
         }else{
-            $results = Airline::where('id',$id)->get()->first();
-            $company_name = $results['operator'];
-            $country = $results['country'];
+            $country = $id;
             $contacts = Contact::where([['airline', '=', $company_name], ['country', '=', $country]])->get();
         }
         $company['id'] = $id;
@@ -37,16 +33,12 @@ class ContactController extends Controller
         return view('contactEdit', compact('company', 'contacts'));
     }
 
-    public function store(Request $request, $id, $type){
-        ;
+    public function store(Request $request, $id, $company_name, $type){
         if ($type = "MRO"){
             $results = Mrocompany::where('id',$id)->get()->first();
-            $company_name = $results['company'];
             $country = $results['country'];
         }else{
-            $results = Airline::where('id',$id)->get()->first();
-            $company_name = $results['operator'];
-            $country = $results['country'];
+            $country = $id;
         }
         
         if ( $request['contact_name'] ){

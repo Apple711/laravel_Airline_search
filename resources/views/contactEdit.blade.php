@@ -12,7 +12,7 @@
     </section>
     <!-- Main content -->
     <section class="content portlet light">
-        <form class="form-horizontal" action="{{url('/contacts/update/'.$company['id'].'/'.$company['type'])}}" method="post">
+        <form class="form-horizontal" action="{{url('/contacts/update/'.$company['id'].'/'.$company['name'].'/'.$company['type'])}}" method="post">
             {{ csrf_field() }}
             <div class="box-body">
                 <div class="form-group custom_input">
