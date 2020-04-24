@@ -34,7 +34,7 @@ class ContactController extends Controller
     }
 
     public function store(Request $request, $id, $company_name, $type){
-        if ($type = "MRO"){
+        if ($type == "MRO"){
             $results = Mrocompany::where('id',$id)->get()->first();
             $country = $results['country'];
         }else{

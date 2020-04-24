@@ -77,11 +77,11 @@
                         <td class=" ">Airline</td>
                         <td><a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a></td>
                     </tr>
+                    @php
+                        $mailchain.= ($i==0) ? $tr->email : "; ".$tr->email;
+                        $i++;
+                    @endphp
                 @endforeach
-                @php
-                    $mailchain.= ($i==0) ? $tr->email : "; ".$tr->email;
-                    $i++;
-                @endphp
             @endif
         @endif
     </tbody>
