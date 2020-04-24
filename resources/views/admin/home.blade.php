@@ -82,6 +82,7 @@
             beforeSend: function(){
                 var xml = '<option></option';    
                 $('#app_sel').html(xml);
+                $("#searchContent").html('');
             },
             success:function(data){
                 var xml = '';
@@ -107,6 +108,9 @@
             type:'POST',
             url:$("#searchContent").data('url'),
             data:{customer_type:customer_type, product_id: product_id, application_id:application_id },
+            beforeSend: function(){
+                $("#searchContent").html('');
+            },
             success:function(data){
                 $("#searchContent").html(data.content);
             }
