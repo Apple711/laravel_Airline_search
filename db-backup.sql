@@ -52,7 +52,7 @@ CREATE TABLE `airlines` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8701 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8702 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `airlines` */
 
@@ -3105,7 +3105,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (3046,'Asia Pacific','Eastern Asia','China','Hainan Airlines','Passenger','Active','41568','B-1795','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2015','5.1','Jin Shan 5 Ireland Co., Ltd.','BoComm Leasing','BoComm Leasing','Operating Lease',NULL,'1837','10904','43524',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3047,'Asia Pacific','Eastern Asia','China','Hainan Airlines','Passenger','Active','41569','B-1796','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2015','5.06','Jin Shan 5 Ireland Co., Ltd.','BoComm Leasing','BoComm Leasing','Operating Lease',NULL,'1824','11759','43524',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3048,'Asia Pacific','Eastern Asia','China','Hainan Airlines','Passenger','Active','41570','B-1797','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2015','4.96','Jin Shan 5 Ireland Co., Ltd.','BoComm Leasing','BoComm Leasing','Operating Lease',NULL,'1790','11253','43524',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
-(3049,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','41259','B-6990','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2013','6.92','Celestial Aviation Trading 2 Ltd','GECAS','GECAS',NULL,NULL,'1722','5986','41973',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3050,'Asia Pacific','Oceania','Australia','Eastern Australia Airlines','Passenger','Active','580','VH-SBT','DHC8 Family','DHC8','DHC8-300','DHC8-300Q','PW120','PW123E',NULL,'T-62T-46','2001','18.46','Qantas','Qantas','Qantas','Operating Lease',NULL,'1720','36320','43465',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3051,'Asia Pacific','Southern Asia','India','Air India','Passenger','Active','6690','VT-EXB','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3','120 kN','GTCP131-9','2015','4.75','Hong Kong Ecafin 1 Ltd','China Aircraft Leasing Company','China Aircraft Leasing Company','Operating Lease',NULL,'1719',NULL,NULL,NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3052,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','39913','B-6485','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24E','24200 Lb','GTCP131-9B','2015','4.75','Xiamen Airlines','Xiamen Airlines',NULL,NULL,NULL,'1718','10905','43524',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
@@ -3298,8 +3297,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (3239,'Asia Pacific','Eastern Asia','Taiwan, Province of China','China Airlines','Passenger','Stored','28710','B-18202','747 Family','747','747-400','747-400','PW4000-94','PW4056','57100 Lb','PW901A','1997','22.52','China Airlines','China Airlines',NULL,NULL,NULL,'1645','80470','43524','United States','2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3240,'Asia Pacific','South-Eastern Asia','Malaysia','AirAsia X','Passenger','Active','1048','9M-XXC','A330 Family','A330 Family CEO','A330 CEO','A330-300','Trent 700','Trent 772B-60','316 kN','GTCP331-350','2009','10.56','AirAsia X','AirAsia X',NULL,NULL,NULL,'3827','12019','40908',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3241,'Asia Pacific','South-Eastern Asia','Indonesia','Citilink','Passenger','Active','6753','PK-GQL','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3','120 kN','GTCP131-9','2015','4.58','Jackson Square Aviation','Jackson Square Aviation','Jackson Square Aviation','Sub Lease','Garuda Indonesia','1645',NULL,NULL,NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
-(3242,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','39829','B-1716','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24E','24200 Lb','GTCP131-9B','2014','5.33','Jin Shan 4 Ireland Co., Ltd.','BoComm Leasing','BoComm Leasing','Sub Lease','Juneyao Airlines','1876',NULL,NULL,NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
-(3243,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','39820','B-1719','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24E','24200 Lb','GTCP131-9B','2014','5.77','Jin Shan 4 Ireland Co., Ltd.','BoComm Leasing','BoComm Leasing','Sub Lease','Juneyao Airlines','1894',NULL,NULL,NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3244,'Asia Pacific','Eastern Asia','China','SF Airlines','Freighter','Active','27522','B-2958','737 Family','737 Classic','737-300','737-300SF','CFM56-3','CFM56-3C1','23500 Lb','GTCP85-129','1995','24.92','SF Airlines','SF Airlines',NULL,NULL,NULL,'1644','53900','42185',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3245,'Asia Pacific','Eastern Asia','China','China Express Airlines','Passenger','Active','15372','B-3382','CRJ Family','CRJ','CRJ 705/900','CRJ-900LR','CF34-8C','CF34-8C5','14510 Lb','RE220(RJ)','2015','4.65','China Express Airlines','China Express Airlines',NULL,NULL,NULL,'1643','9733','43524',NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
 (3246,'Asia Pacific','Oceania','Australia','Tigerair Australia','Passenger','Active','6749','VH-XUH','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne','118 kN','GTCP131-9','2015','4.63','CBA A320 6749 Pty Ltd','CBA Air Pty','Commonwealth Bank Of Australia','Operating Lease',NULL,'1676',NULL,NULL,NULL,'2020-03-27 07:09:36','2020-03-27 07:09:36'),
@@ -3928,7 +3925,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (3869,'Asia Pacific','Eastern Asia','Korea, Republic of','T\'Way Air','Passenger','Active','37535','HL8070','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2009','10.79','SMBC Aviation Capital','SMBC Aviation Capital','SMBC Aviation Capital',NULL,NULL,'1348',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3870,'Asia Pacific','South-Eastern Asia','Thailand','Thai Smile Airways','Passenger','Active','5258','HS-TXC','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne','118 kN','GTCP131-9','2012','7.69','SMBC Aviation Capital','SMBC Aviation Capital','SMBC Aviation Capital','Operating Lease',NULL,'2775','8865','42551',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3871,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','42931','B-7848','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2016','3.75','Xiamen Airlines','Xiamen Airlines',NULL,NULL,NULL,'1347','7605','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
-(3872,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61354','B-1552','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2016','3.75','9 Air','9 Air',NULL,NULL,NULL,'1347',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3873,'Asia Pacific','Eastern Asia','Korea, Republic of','Jin Air','Passenger','Active','34209','HL7750','777 Family','777','777-200','777-200ER','PW4000-112','PW4090','90200 Lb','GTCP331-500','2007','12.94','Jin Air','Jin Air',NULL,NULL,NULL,'4702',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3874,'Asia Pacific','Eastern Asia','China','China Southern Airlines','Passenger','Active','7142','B-8425','A320 Family','A320 Family CEO','A321 CEO','A321-200','CFM56-5B','CFM56-5B3/3','147 kN','GTCP131-9','2016','3.83','China Southern Airlines','China Southern Airlines',NULL,'Finance Lease',NULL,'1347',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3875,'Asia Pacific','Eastern Asia','China, Hong Kong','Cathay Pacific Airways','Passenger','Active','34','B-LRC','A350 Family','A350','A350','A350-900','Trent XWB','Trent XWB-84',NULL,'HGT1700','2016','3.81','AerCap','AerCap','AerCap',NULL,NULL,'1347',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
@@ -3938,7 +3934,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (3879,'Asia Pacific','South-Eastern Asia','Indonesia','Garuda Indonesia','Passenger','Active','36830','PK-GFS','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2011','8.37','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'3027','21578','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3880,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','34255','B-5151','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24','24200 Lb','GTCP131-9B','2006','13.85','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'5019','39174','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3881,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','34256','B-5152','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24','24200 Lb','GTCP131-9B','2006','13.79','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'4996','38879','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
-(3882,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','38041','B-6989','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2013','6.79','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'1722','5536','41973',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3883,'Asia Pacific','Oceania','New Zealand','Airwork Flight Operations Limited','Freighter','Active','24683','ZK-PAT','737 Family','737 Classic','737-400','737-400SF','CFM56-3','CFM56-3C1','23500 Lb','GTCP85-129','1990','29.77','Airwork Flight Operations Limited','Airwork Flight Operations Limited',NULL,NULL,NULL,'1344','65016','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3884,'Asia Pacific','Eastern Asia','China','Beijing Capital Airlines','Passenger','Active','7220','B-8552','A320 Family','A320 Family CEO','A321 CEO','A321-200','V2500-A5','V2533-A5 SelectOne',NULL,'GTCP131-9','2016','3.75','SMBC Aviation Capital','SMBC Aviation Capital','SMBC Aviation Capital',NULL,NULL,'1343',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3885,'Asia Pacific','Eastern Asia','China','Sichuan Airlines','Passenger','Active','7227','B-8602','A320 Family','A320 Family CEO','A321 CEO','A321-200','CFM56-5B','CFM56-5B3/3',NULL,'GTCP131-9','2016','3.71','Sichuan Airlines','Sichuan Airlines',NULL,NULL,NULL,'1342',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
@@ -4030,7 +4025,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (3971,'Asia Pacific','Eastern Asia','Japan','Japan Airlines','Passenger','Active','33849','JA613J','767 Family','767','767-300','767-300ER','CF6-80C2','CF6-80C2B7F','60030 Lb','GTCP331-200','2005','14.67','Japan Airlines','Japan Airlines',NULL,NULL,NULL,'5326',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3972,'Asia Pacific','Southern Asia','India','IndiGo','Passenger','Active','1767','VT-IDV','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/P','120 kN','GTCP131-9','2002','18.08','Genesis Funding Ltd','Genesis Funding Ltd','WNG Capital','Operating Lease',NULL,'1301','54730','43524',NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3973,'Asia Pacific','South-Eastern Asia','Singapore','Scoot','Passenger','Active','37123','9V-OFG','787 Family','787','787-8','787-8','Trent 1000','Trent 1000-G2','53000 Lb','APS5000','2016','3.63','Scoot','Scoot',NULL,NULL,NULL,'1300',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
-(3974,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61351','B-1551','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2016','3.6','9 Air','9 Air',NULL,NULL,NULL,'1300',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3975,'Asia Pacific','Eastern Asia','China','Tianjin Airlines','Passenger','Active','19000717','B-3143','E-Jet Family','E190/E195','E195','E195LR','CF34-10E','CF34-10E6','18820 Lb','APS3200/4505789E','2016','3.65','Tianjin Airlines','Tianjin Airlines',NULL,NULL,NULL,'1300',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3976,'Asia Pacific','Eastern Asia','China','Beijing Capital Airlines','Passenger','Active','7288','B-8553','A320 Family','A320 Family CEO','A321 CEO','A321-200','V2500-A5','V2533-A5 SelectOne',NULL,'GTCP131-9','2016','3.6','SMBC Aviation Capital','SMBC Aviation Capital','SMBC Aviation Capital',NULL,NULL,'1300',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
 (3977,'Asia Pacific','South-Eastern Asia','Thailand','Royal Thai Air Force','VIP','Active','95095','L18-2/59','SSJ 100 Family','SSJ 100','SSJ 100','SSJ 100-95LR','SaM146','SaM146 1S18','69 kN','RE220','2015','4.29','Royal Thai Air Force','Royal Thai Air Force',NULL,NULL,NULL,'1300',NULL,NULL,NULL,'2020-03-27 07:09:38','2020-03-27 07:09:38'),
@@ -4310,12 +4304,10 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4251,'Asia Pacific','South-Eastern Asia','Singapore','Singapore Airlines','Passenger','Active','77','9V-SMI','A350 Family','A350','A350','A350-900','Trent XWB','Trent XWB-84',NULL,'HGT1700','2016','3.33','Singapore Airlines','Singapore Airlines',NULL,NULL,NULL,'1188',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4252,'Asia Pacific','Eastern Asia','China','Spring Airlines','Passenger','Active','7338','B-8873','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3',NULL,'GTCP131-9','2016','3.31','Spring Airlines','Spring Airlines',NULL,NULL,NULL,'1188','8139','43524',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4253,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Active','7468','B-8502','A320 Family','A320 Family CEO','A321 CEO','A321-200','V2500-A5','V2530-A5 SelectOne',NULL,'GTCP131-9','2016','3.29','Air China','Air China',NULL,NULL,NULL,'1188',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
-(4254,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61355','B-1553','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2016','3.56','9 Air','9 Air',NULL,NULL,NULL,'1188',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4255,'Asia Pacific','South-Eastern Asia','Cambodia','Cambodia Angkor Air','Passenger','Active','7434','XU-353','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne',NULL,'GTCP131-9','2016','3.31','BOC Aviation','BOC Aviation','BOC Aviation',NULL,NULL,'1188',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4256,'Asia Pacific','Eastern Asia','Korea, Republic of','Korean Air','Passenger','Stored','26397','HL7492','747 Family','747','747-400','747-400','PW4000-94','PW4056','57100 Lb','PW901A','1995','25.21','Korean Air','Korean Air',NULL,NULL,NULL,'1340','90357','43524','United States','2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4257,'Asia Pacific','Southern Asia','India','TruJet','Passenger','Active','1364','VT-TMC','ATR Family','ATR','ATR72','ATR72-600','PW120','PW127M',NULL,NULL,'2016','3.44','DAE Capital','DAE Capital','DAE Capital','Operating Lease',NULL,'1189','4','43465',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4258,'Asia Pacific','South-Eastern Asia','Malaysia','Eaglexpress Air','Passenger','Stored','25701','9M-MPD','747 Family','747','747-400','747-400','PW4000-94','PW4056','57100 Lb','PW901A','1993','26.63','Eaglexpress Air','Eaglexpress Air',NULL,NULL,NULL,'1543',NULL,NULL,'Malaysia','2020-03-27 07:09:39','2020-03-27 07:09:39'),
-(4259,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61356','B-1556','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2016','3.37','9 Air','9 Air',NULL,NULL,NULL,'1187',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4260,'Asia Pacific','Eastern Asia','Taiwan, Province of China','China Airlines','Passenger','Active','66','B-18903','A350 Family','A350','A350','A350-900','Trent XWB','Trent XWB-84','374 kN','HGT1700','2016','3.33','China Airlines','China Airlines',NULL,NULL,NULL,'1187','10246','43524',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4261,'Asia Pacific','Eastern Asia','Japan','J-Air','Passenger','Active','19000724','JA245J','E-Jet Family','E190/E195','E190','E190STD','CF34-10E','CF34-10E5','18820 Lb','APS3200/4505789E','2016','3.33','Japan Airlines','Japan Airlines','Japan Airlines',NULL,NULL,'1187',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4262,'Asia Pacific','Eastern Asia','China','Lucky Air','Passenger','Active','7467','B-8445','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3',NULL,'GTCP131-9','2016','3.29','China Aircraft Leasing Company','China Aircraft Leasing Company','China Aircraft Leasing Company',NULL,NULL,'1187',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
@@ -4466,8 +4458,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4407,'Asia Pacific','Eastern Asia','Japan','Jetstar Japan','Passenger','Active','5492','JA08JJ','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne','118 kN','GTCP131-9','2013','7.17','JJHK2 Ltd','ORIX Aviation Systems Limited','ORIX Aviation','Sub Lease','Qantas','2590',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4408,'Asia Pacific','Eastern Asia','Japan','All Nippon Airways','Passenger','Active','7382','JA112A','A320 Family','A320 Family CEO','A321 CEO','A321-200','CFM56-5B','CFM56-5B3/3','147 kN','GTCP131-9','2016','3.38','TC Skyward','Tokyo Century Corporation','Tokyo Century Corporation','Sub Lease','ANA Holdings Inc','1218',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4409,'Asia Pacific','Eastern Asia','Japan','All Nippon Airways','Passenger','Active','7430','JA113A','A320 Family','A320 Family CEO','A321 CEO','A321-200','CFM56-5B','CFM56-5B3/3','147 kN','GTCP131-9','2016','3.31','TC Skyward','Tokyo Century Corporation','Tokyo Century Corporation','Sub Lease','ANA Holdings Inc','1195',NULL,NULL,NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
-(4410,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','41261','B-6992','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2013','6.63','Haitong UniTrust Leasing (Hong Kong) Co., Ltd','Haitong UniTrust International Leasing Co., Ltd','Haitong UniTrust International Leasing Co., Ltd','Operating Lease',NULL,'1477','5139','42004',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
-(4411,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','41260','B-6991','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2013','6.79','Haitong UniTrust Leasing (Hong Kong) Co., Ltd','Haitong UniTrust International Leasing Co., Ltd','Haitong UniTrust International Leasing Co., Ltd','Operating Lease',NULL,'1476','5819','42004',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4412,'Asia Pacific','South-Eastern Asia','Philippines','Philippines AirAsia','Passenger','Active','4797','RP-C8189','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B6/3','105 kN','GTCP131-9','2011','8.69','TC Skyward Aviation Ireland Ltd','Tokyo Century Corporation','Tokyo Century Corporation','Operating Lease',NULL,'2917','7','40908',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4413,'Asia Pacific','Southern Asia','India','SpiceJet','Passenger','Active','29641','VT-SGJ','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26','26300 Lb','GTCP131-9B','2005','15.17','Aviator Capital','Aviator Capital','Aviator Capital','Operating Lease',NULL,'3394','48237','43524',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
 (4414,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','42938','B-7816','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2017','3.12','Xiamen Airlines','Xiamen Airlines',NULL,NULL,NULL,'1117','5864','43524',NULL,'2020-03-27 07:09:39','2020-03-27 07:09:39'),
@@ -4758,7 +4748,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4699,'Asia Pacific','South-Eastern Asia','Thailand','Siam Air','Passenger','Stored','25893','HS-BRU','737 Family','737 Classic','737-300','737-300','CFM56-3','CFM56-3B1','20000 Lb','GTCP85-129','1993','26.9','Siam Air','Siam Air',NULL,NULL,NULL,'1116',NULL,NULL,'Thailand','2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4700,'Asia Pacific','South-Eastern Asia','Thailand','Bangkok Airways','Passenger','Active','2310','HS-PGV','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5','118 kN','GTCP131-9','2004','15.46','Aircraft MSN 2310 LLC','Aircastle Investment','Aircastle Investment','Operating Lease',NULL,'5596','39078','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4701,'Asia Pacific','South-Eastern Asia','Thailand','Bangkok Airways','Passenger','Active','2254','HS-PGU','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5','118 kN','GTCP131-9','2004','15.77','Aircastle Investment','Aircastle Investment','Aircastle Investment','Operating Lease',NULL,'5673','39296','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
-(4702,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','39819','B-1715','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24E','24200 Lb','GTCP131-9B','2014','5.77','CMIG Aircraft Leasing Fourteen Ireland Ltd','CMIG Leasing','CMIG Leasing',NULL,NULL,'1883',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4703,'Asia Pacific','Southern Asia','Nepal','Shree Airlines','Passenger','Active','10048','9N-AMB','CRJ Family','CRJ','CRJ 700','CRJ-700ER','CF34-8C','CF34-8C5B1','1370 Lb','RE220(RJ)','2002','17.79','Shree Airlines','Shree Airlines',NULL,NULL,NULL,'996','13264','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4704,'Asia Pacific','Eastern Asia','Korea, Republic of','Jin Air','Passenger','Active','37163','HL7786','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2009','10.77','AerCap','AerCap','AerCap',NULL,NULL,'3904',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4705,'Asia Pacific','South-Eastern Asia','Indonesia','NAM Air','Passenger','Active','1093','PK-NYY','ATR Family','ATR','ATR72','ATR72-600','PW120','PW127M',NULL,NULL,'2013','6.77','NAM Air','NAM Air',NULL,NULL,NULL,'994','7266','43465',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
@@ -4949,7 +4938,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4890,'Asia Pacific','Southern Asia','India','IndiGo','Passenger','Active','7331','VT-ITP','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9','2017','3.15','Oriental Leasing 8 Company Ltd','CMB Financial Leasing','CMB Financial Leasing','Operating Lease',NULL,'942','7134','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4891,'Asia Pacific','Eastern Asia','China','Tianjin Airlines','Passenger','Active','19000734','B-3257','E-Jet Family','E190/E195','E195','E195LR','CF34-10E','CF34-10E6','18820 Lb','APS3200/4505789E','2017','2.73','Tianjin Airlines','Tianjin Airlines',NULL,NULL,NULL,'941',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4892,'Asia Pacific','Eastern Asia','China','Colorful Guizhou Airlines','Passenger','Active','19000726','B-3273','E-Jet Family','E190/E195','E190','E190LR','CF34-10E','CF34-10E6','18820 Lb','APS3200/4505001B','2017','3.13','Colorful Guizhou Airlines','Colorful Guizhou Airlines',NULL,NULL,NULL,'941',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
-(4893,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61360','B-1472','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2017','2.81','9 Air','9 Air',NULL,NULL,NULL,'940',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4894,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','42951','B-1456','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B24E','24200 Lb','GTCP131-9B','2017','2.62','ICBC','ICBC','ICBC',NULL,NULL,'939','4372','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4895,'Asia Pacific','South-Eastern Asia','Thailand','Thai Airways International','Passenger','Stored','26613','HS-TDF','737 Family','737 Classic','737-400','737-400','CFM56-3','CFM56-3C1','23500 Lb','GTCP36-280','1992','27.77','Thai Airways International','Thai Airways International',NULL,NULL,NULL,'939','35688','43524','Thailand','2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4896,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Active','1807','B-8385','A330 Family','A330 Family CEO','A330 CEO','A330-300','Trent 700','Trent 772C-60',NULL,'GTCP331-350','2017','2.71','Air China','Air China',NULL,NULL,NULL,'938',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
@@ -4962,7 +4950,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4903,'Asia Pacific','South-Eastern Asia','Philippines','PAL Express','Passenger','Active','4564','RP-C5902','DHC8 Family','DHC8','DHC8-400','DHC8-400Q','PW150','PW150A',NULL,'T-62T-46','2017','2.71','Philippine Airlines','Philippine Airlines','Philippine Airlines',NULL,NULL,'937','2924','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4904,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','35635','B-5388','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2008','11.33','Kornerstone Airlease No. 1 Ltd','ORIX Aviation','ORIX Aviation','Operating Lease',NULL,'4101','31492','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4905,'Asia Pacific','Eastern Asia','China','China Eastern Airlines','Passenger','Active','1809','B-8862','A330 Family','A330 Family CEO','A330 CEO','A330-300','Trent 700','Trent 772C-60','316 kN','GTCP331-350','2017','2.75','China Eastern Airlines','China Eastern Airlines',NULL,NULL,NULL,'936','6657','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
-(4906,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61357','B-1592','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2017','3.23','9 Air','9 Air',NULL,NULL,NULL,'936',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4907,'Asia Pacific','Eastern Asia','China','China Southern Airlines','Passenger','Active','7470','B-8673','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9','2017','3.06','AerCap','AerCap','AerCap','Operating Lease',NULL,'936',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4908,'Asia Pacific','South-Eastern Asia','Cambodia','JC International Airlines','Passenger','Active','7404','XU-996','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3',NULL,'GTCP131-9','2016','3.42','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace',NULL,NULL,'936',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4909,'Asia Pacific','Eastern Asia','China','Chengdu Airlines','Passenger','Active','7452','B-8876','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3',NULL,'GTCP131-9','2017','3.06','Chengdu Airlines','Chengdu Airlines',NULL,NULL,NULL,'935',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
@@ -4985,7 +4972,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (4926,'Asia Pacific','Eastern Asia','China','Shenzhen Airlines','Passenger','Active','7738','B-8665','A320 Family','A320 Family CEO','A319 CEO','A319-100','V2500-A5','V2527M-A5 SelectOne','118 kN','GTCP131-9','2017','2.6','Shenzhen Airlines','Shenzhen Airlines',NULL,NULL,NULL,'931',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4927,'Asia Pacific','Eastern Asia','Taiwan, Province of China','EVA Air','Passenger','Stored','29111','B-16411','747 Family','747','747-400','747-400','CF6-80C2','CF6-80C2B1F','57160 Lb','PW901A','1998','22.04','ChailLease','ChailLease','ChailLease',NULL,NULL,'945','85270','43524','United States','2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4928,'Asia Pacific','Eastern Asia','China','Xiamen Airlines','Passenger','Active','63683','B-1302','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2017','2.6','Xiamen Airlines','Xiamen Airlines',NULL,NULL,NULL,'930','4310','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
-(4929,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61361','B-1473','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2017','2.79','9 Air','9 Air',NULL,NULL,NULL,'930',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4930,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Active','7761','B-8582','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne',NULL,'GTCP131-9','2017','2.6','Air China','Air China',NULL,NULL,NULL,'929',NULL,NULL,NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4931,'Asia Pacific','Eastern Asia','China','Shandong Airlines','Passenger','Active','36546','B-5513','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2010','9.88','Keystone 2 Ltd','ST Aerospace Resources','ST Aerospace Resources','Operating Lease',NULL,'3575','29654','43524',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
 (4932,'Asia Pacific','Southern Asia','Maldives','Maldivian','Passenger','Active','2347','8Q-IAN','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/P','120 kN','GTCP131-9','2004','15.37','Tempelhof Aircraft Leasing (Ireland) Ltd','Aircastle Investment','Aircastle Investment','Operating Lease',NULL,'2728','19579','41213',NULL,'2020-03-27 07:09:40','2020-03-27 07:09:40'),
@@ -5530,7 +5516,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (5472,'Asia Pacific','Southern Asia','India','GoAir','Passenger','Active','7074','VT-WGB','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9','2016','3.88','SMBC Aviation Capital','SMBC Aviation Capital','SMBC Aviation Capital',NULL,NULL,'725','9800','43524',NULL,'2020-03-27 07:09:42','2020-03-27 07:09:42'),
 (5473,'Asia Pacific','South-Eastern Asia','Malaysia','Malaysia Airlines','Passenger','Active','665','9M-MTU','A330 Family','A330 Family CEO','A330 CEO','A330-200','PW4000-100','PW4168A','302 kN','GTCP331-350','2005','14.94','Whitney Ireland Leasing Ltd','AerCap','AerCap',NULL,NULL,'725','29869','40908',NULL,'2020-03-27 07:09:42','2020-03-27 07:09:42'),
 (5474,'Asia Pacific','Oceania','Australia','National Jet Express','Passenger','Active','E3384','VH-NJE','146 Family','146','RJ100','RJ100','LF507','LF507-1F','7000 Lb','T-62T-46C3','2001','18.92','National Jet Express','National Jet Express',NULL,NULL,NULL,'725',NULL,NULL,NULL,'2020-03-27 07:09:42','2020-03-27 07:09:42'),
-(5475,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61365','B-1233','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2018','2.1','9 Air','9 Air',NULL,NULL,NULL,'724',NULL,NULL,NULL,'2020-03-27 07:09:42','2020-03-27 07:09:42'),
 (5476,'Asia Pacific','Eastern Asia','China','Chengdu Airlines','Passenger','Stored','8066','B-000J','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B4/3','120 kN','GTCP131-9A','2018','2.06','Chengdu Airlines','Chengdu Airlines',NULL,NULL,NULL,'724',NULL,NULL,'China','2020-03-27 07:09:42','2020-03-27 07:09:42'),
 (5477,'Asia Pacific','Eastern Asia','China','Shandong Airlines','Passenger','Active','43907','B-1230','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2018','2','ICBC','ICBC','ICBC',NULL,NULL,'724','3433','43524',NULL,'2020-03-27 07:09:42','2020-03-27 07:09:42'),
 (5478,'Asia Pacific','Southern Asia','Pakistan','Pakistan International Airlines','Passenger','Stored','1029','AP-BKZ','ATR Family','ATR','ATR72','ATR72-500','PW120','PW127M',NULL,NULL,'2012','7.87','Ottawa Leasing Limited','Ottawa Leasing Limited','Ottawa Leasing Limited','Operating Lease',NULL,'724','9425','43465','Pakistan','2020-03-27 07:09:42','2020-03-27 07:09:42'),
@@ -6040,7 +6025,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (5982,'Asia Pacific','Eastern Asia','China','Donghai Airlines','Passenger','Active','43910','B-1104','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2018','1.77','ICBC','ICBC','ICBC',NULL,NULL,'548','1405','43524',NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
 (5983,'Asia Pacific','Southern Asia','India','Kalyan Jewellers','Corporate','Active','14501202','VT-KJG','ERJ Family','ERJ','ERJ-135','Legacy 650','AE3007','AE3007A2','9020 Lb','T-62T-40C14','2014','6.25','Kalyan Jewellers','Kalyan Jewellers',NULL,NULL,NULL,'548',NULL,NULL,NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
 (5984,'Asia Pacific','Southern Asia','India','IndiGo','Passenger','Active','6946','VT-ITY','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9A','2017','2.85','Jackson Square Aviation','Jackson Square Aviation','Jackson Square Aviation','Operating Lease',NULL,'548','4541','43524',NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
-(5985,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61368','B-1172','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2018','1.83','9 Air','9 Air',NULL,NULL,NULL,'547',NULL,NULL,NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
 (5986,'Asia Pacific','Southern Asia','India','IndiGo','Passenger','Active','8465','VT-IVZ','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9A','2018','1.56','Aircastle Investment','Aircastle Investment','Aircastle Investment','Operating Lease',NULL,'546','1720','43524',NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
 (5987,'Asia Pacific','Eastern Asia','Korea, Republic of','Jeju Air','Passenger','Active','36814','HL7213','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26/3','26300 Lb','GTCP131-9B','2009','10.63','Aircastle Investment','Aircastle Investment','Aircastle Investment','Operating Lease',NULL,'917','22636','42460',NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
 (5988,'Asia Pacific','Eastern Asia','China','China Eastern Airlines','Passenger','Active','8074','B-1211','A320 Family','A320 Family NEO','A320 NEO','A320-200N','LEAP-1A','LEAP-1A26','118 kN','GTCP131-9A','2018','1.58','China Eastern Airlines','China Eastern Airlines',NULL,NULL,NULL,'545','1371','43524',NULL,'2020-03-27 07:09:43','2020-03-27 07:09:43'),
@@ -6602,7 +6586,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (6544,'Asia Pacific','Southern Asia','India','Air India','Passenger','Active','2907','VT-SCF','A320 Family','A320 Family CEO','A319 CEO','A319-100','CFM56-5B','CFM56-5B6/P','105 kN','GTCP131-9','2006','13.52','Air India','Air India',NULL,NULL,NULL,'419','12052','40908',NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6545,'Asia Pacific','Oceania','Australia','Alliance Airlines','Passenger','Active','11349','VH-FKC','70/100 Family','70/100','Fk100','F100','Tay 600','Tay 650-15','15100 Lb','GTCP36-150RR','1991','28.73','Aircraft Leasing No.1 Pty Limited','Alliance Airlines',NULL,NULL,NULL,'5708',NULL,NULL,NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6546,'Asia Pacific','Eastern Asia','China','China Southern Airlines','Passenger','Active','8704','B-303K','A320 Family','A320 Family NEO','A321 NEO','A321-200N','LEAP-1A','LEAP-1A33','146 kN','GTCP131-9A','2019','1.13','China Southern Airlines','China Southern Airlines',NULL,NULL,NULL,'390',NULL,NULL,NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
-(6547,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61370','B-208K','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2018','1.25','9 Air','9 Air',NULL,NULL,NULL,'390',NULL,NULL,NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6548,'Asia Pacific','South-Eastern Asia','Indonesia','Travira Air','Passenger','Active','1187','PK-TVM','ATR Family','ATR','ATR72','ATR72-600','PW120','PW127M',NULL,NULL,'2014','5.44','Travira Air','Travira Air',NULL,NULL,NULL,'390','1712','43465',NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6549,'Asia Pacific','South-Eastern Asia','Singapore','Singapore Airlines','Passenger','Active','278','9V-SHD','A350 Family','A350','A350','A350-900','Trent XWB','Trent XWB-84','374 kN','HGT1700','2019','1.15','Singapore Airlines','Singapore Airlines',NULL,NULL,NULL,'389',NULL,NULL,NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6550,'Asia Pacific','South-Eastern Asia','Vietnam','Vietnam Airlines','Passenger','Active','279','VN-A898','A350 Family','A350','A350','A350-900','Trent XWB','Trent XWB-84','374 kN','HGT1700','2019','1.15','Jackson Square Aviation Ireland Ltd','Jackson Square Aviation','Jackson Square Aviation','Operating Lease',NULL,'389',NULL,NULL,NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
@@ -6626,7 +6609,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (6568,'Asia Pacific','South-Eastern Asia','Singapore','Scoot','Passenger','Active','5449','9V-TRV','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne','118 kN',NULL,'2012','7.31','Pembroke Aircraft Leasing 4 Ltd','Standard Chartered Bank','Pembroke Capital','Operating Lease',NULL,'381','18574','43465',NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6569,'Asia Pacific','Southern Asia','Nepal','Saurya Airlines','Passenger','Active','7772','9N-AME','CRJ Family','CRJ','CRJ 100/200','CRJ-200ER','CF34-3B','CF34-3B1','9220 Lb','GTCP36-150RJ','2003','17.04','Saurya Airlines','Saurya Airlines',NULL,NULL,NULL,'381','22722','42794',NULL,'2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6570,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Stored','60886','B-1225','737 Family','737 MAX','737 MAX 8','737 MAX 8','LEAP-1B','LEAP-1B27','26400 Lb','GTCP131-9B','2018','2.08','Air China','Air China',NULL,NULL,NULL,'379','3215','43524','China','2020-03-27 07:09:46','2020-03-27 07:09:46'),
-(6571,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Stored','61371','B-206J','737 Family','737 MAX','737 MAX 8','737 MAX 8','LEAP-1B','LEAP-1B','26400 Lb','GTCP131-9B','2018','1.46','9 Air','9 Air',NULL,NULL,NULL,'379',NULL,NULL,'China','2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6572,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Stored','60903','B-1179','737 Family','737 MAX','737 MAX 8','737 MAX 8','LEAP-1B','LEAP-1B27','26400 Lb','GTCP131-9B','2018','1.44','Air China','Air China',NULL,NULL,NULL,'379','6','43496','China','2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6573,'Asia Pacific','Eastern Asia','China','Shandong Airlines','Passenger','Stored','61445','B-207F','737 Family','737 MAX','737 MAX 8','737 MAX 8','LEAP-1B','LEAP-1B27','26400 Lb','GTCP131-9B','2018','1.33','Shandong Airlines','Shandong Airlines',NULL,NULL,NULL,'379','565','43524','China','2020-03-27 07:09:46','2020-03-27 07:09:46'),
 (6574,'Asia Pacific','Eastern Asia','China','Air China','Passenger','Stored','60899','B-1220','737 Family','737 MAX','737 MAX 8','737 MAX 8','LEAP-1B','LEAP-1B27','26400 Lb','GTCP131-9B','2018','1.69','Air China','Air China',NULL,NULL,NULL,'379',NULL,NULL,'China','2020-03-27 07:09:46','2020-03-27 07:09:46'),
@@ -7690,7 +7672,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (7632,'Asia Pacific','Eastern Asia','China','China Eastern Airlines','Passenger','Active','9143','B-30AV','A320 Family','A320 Family NEO','A320 NEO','A320-200N','LEAP-1A','LEAP-1A26','118 kN','GTCP131-9A','2019','0.5','China Eastern Airlines','China Eastern Airlines',NULL,NULL,NULL,'144',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7633,'Asia Pacific','South-Eastern Asia','Thailand','Thai Lion Air','Passenger','Active','1939','HS-LAL','A330 Family','A330 Family NEO','A330 NEO','A330-900','Trent 7000','Trent 7000',NULL,'GTCP331-350','2019','0.46','Lion Air','Lion Air','Lion Air','Operating Lease',NULL,'144',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7634,'Asia Pacific','Eastern Asia','China','China Southern Airlines','Passenger','Stored','19000529','B-3145','E-Jet Family','E190/E195','E190','E190LR','CF34-10E','CF34-10E6','18820 Lb','APS3200/4505789E','2012','8.1','CDB Leasing Co. Ltd','CDB Aviation Lease Finance','CDB Aviation Lease Finance','Operating Lease',NULL,'144','7951','42185','China','2020-03-27 07:09:49','2020-03-27 07:09:49'),
-(7635,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61321','B-7105','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2015','4.5','Timaero Ireland Limited','VEB-Leasing','VEB-Leasing','Operating Lease',NULL,'144',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7636,'Asia Pacific','Oceania','Australia','Virgin Australia','Passenger','Active','1452','VH-XFH','A330 Family','A330 Family CEO','A330 CEO','A330-200','Trent 700','Trent 772B-60EP','316 kN','GTCP331-350','2013','6.62','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Wet Lease','Virgin Australia International Airlines','2371','19798','43524',NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7637,'Asia Pacific','Oceania','Australia','Virgin Australia','Passenger','Active','1561','VH-XFJ','A330 Family','A330 Family CEO','A330 CEO','A330-200','Trent 700','Trent 772B-60EP','316 kN','GTCP331-350','2014','5.6','CBA A330 1561 Pty Ltd','Commonwealth Bank Of Australia','Commonwealth Bank Of Australia','Wet Lease','Virgin Australia International Airlines','2009','16371','43524',NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7638,'Asia Pacific','Oceania','Australia','Virgin Australia','Passenger','Active','1306','VH-XFD','A330 Family','A330 Family CEO','A330 CEO','A330-200','Trent 700','Trent 772B-60EP','316 kN','GTCP331-350','2012','8.04','Megane Top Co. Ltd','ORIX Aviation','ORIX Aviation','Wet Lease','Virgin Australia International Airlines','2889','24061','43524',NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
@@ -7879,7 +7860,6 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (7821,'Asia Pacific','South-Eastern Asia','Indonesia','Indonesia AirAsia','Passenger','Active','3299','PK-AZP','A320 Family','A320 Family CEO','A320 CEO','A320-200','CFM56-5B','CFM56-5B6/3','105 kN','GTCP131-9','2007','12.48','Avolon Aerospace','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'111','14551','40908',NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7822,'Asia Pacific','Southern Asia','India','Vistara','Passenger','Active','9381','VT-TNV','A320 Family','A320 Family NEO','A320 NEO','A320-200N','LEAP-1A','LEAP-1A26','118 kN','GTCP131-9A','2019','0.35','GECAS','GECAS','GECAS','Operating Lease',NULL,'110',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7823,'Asia Pacific','Southern Asia','India','Air India','Passenger','Active','4020','VT-SCS','A320 Family','A320 Family CEO','A319 CEO','A319-100','CFM56-5B','CFM56-5B6/3','105 kN','GTCP131-9','2009','10.63','Air India','Air India',NULL,NULL,NULL,'110','5596','40908',NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
-(7824,'Asia Pacific','Eastern Asia','China','9 Air','Passenger','Active','61322','B-7113','737 Family','737 NextGen','737-800','737-800','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2015','4.37','Timaero Ireland Limited','VEB-Leasing','VEB-Leasing','Operating Lease',NULL,'110',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7825,'Asia Pacific','Eastern Asia','China','West Air (China)','Passenger','Active','6120','B-1898','A320 Family','A320 Family CEO','A320 CEO','A320-200','V2500-A5','V2527-A5 SelectOne','118 kN','GTCP131-9','2014','5.9','BOC Aviation','BOC Aviation','BOC Aviation','Operating Lease',NULL,'110',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7826,'Asia Pacific','Eastern Asia','China','Qingdao Airlines','Passenger','Active','9220','B-30AU','A320 Family','A320 Family NEO','A320 NEO','A320-200N','PW1100G','PW1127G','117 kN','GTCP131-9A','2019','0.37','Qingdao Airlines','Qingdao Airlines',NULL,NULL,NULL,'109',NULL,NULL,NULL,'2020-03-27 07:09:49','2020-03-27 07:09:49'),
 (7827,'Asia Pacific','Eastern Asia','China','Hainan Airlines','Passenger','Stored','38055','B-2739','787 Family','787','787-8','787-8','GEnx-1B','GEnx-1B67','67000 Lb','APS5000','2014','6.06','Hainan Airlines','Hainan Airlines',NULL,NULL,NULL,'109','20101','43524','China','2020-03-27 07:09:49','2020-03-27 07:09:49'),
@@ -8755,7 +8735,31 @@ insert  into `airlines`(`id`,`region`,`subregion`,`country`,`operator`,`primaryr
 (8697,'Asia Pacific','Eastern Asia','China','China Eastern Airlines','Passenger','Active','39727','B-5807','737 Family','737 NextGen','737-700','737-700','CFM56-7B','CFM56-7B26E','26300 Lb','GTCP131-9B','2013','6.65','China Eastern Airlines','China Eastern Airlines',NULL,NULL,NULL,'0','16117','43524',NULL,'2020-03-27 07:09:51','2020-03-27 07:09:51'),
 (8698,'Asia Pacific','Eastern Asia','China','Hainan Airlines','Passenger','Active','1532','B-5950','A330 Family','A330 Family CEO','A330 CEO','A330-300','Trent 700','Trent 772B-60','316 kN','GTCP331-350','2014','5.88','Hong Kong Airlines','Hong Kong Airlines','Hong Kong Airlines','Operating Lease',NULL,'0',NULL,NULL,NULL,'2020-03-27 07:09:51','2020-03-27 07:09:51'),
 (8699,'Asia Pacific','Eastern Asia','China, Hong Kong','Hong Kong Airlines','Passenger','Active','452','B-LHB','A330 Family','A330 Family CEO','A330 CEO','A330-200','Trent 700','Trent 772B-60','316 kN','GTCP331-350','2002','18.19','Avolon Aerospace (Ireland) AOE 90 Ltd','Avolon Aerospace','Avolon Aerospace','Operating Lease',NULL,'0','61360','42855',NULL,'2020-03-27 07:09:51','2020-03-27 07:09:51'),
-(8700,'Asia Pacific','South-Eastern Asia','Singapore','Singapore Airlines','Passenger','Active','76','9V-SKP','A380 Family','A380','A380','A380-800','Trent 900','Trent 970-84','311 kN','PW980A','2011','8.79','Singapore Airlines','Singapore Airlines',NULL,NULL,NULL,'0',NULL,NULL,NULL,'2020-03-27 07:09:51','2020-03-27 07:09:51');
+(8700,'Asia Pacific','South-Eastern Asia','Singapore','Singapore Airlines','Passenger','Active','76','9V-SKP','A380 Family','A380','A380','A380-800','Trent 900','Trent 970-84','311 kN','PW980A','2011','8.79','Singapore Airlines','Singapore Airlines',NULL,NULL,NULL,'0',NULL,NULL,NULL,'2020-03-27 07:09:51','2020-03-27 07:09:51'),
+(8701,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2020-04-02 16:19:06','2020-04-02 16:19:06');
+
+/*Table structure for table `appfamilies` */
+
+DROP TABLE IF EXISTS `appfamilies`;
+
+CREATE TABLE `appfamilies` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `productid` int(11) NOT NULL,
+  `appfamily` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+/*Data for the table `appfamilies` */
+
+insert  into `appfamilies`(`id`,`productid`,`appfamily`,`created_at`,`updated_at`) values 
+(1,2,'sdgsdf124123','2020-04-26 21:17:44','2020-04-26 21:24:09'),
+(2,6,'sdfasfd','2020-04-26 21:24:15','2020-04-26 21:24:15'),
+(3,1,'fdsdf','2020-04-27 06:41:49','2020-04-27 06:41:49'),
+(4,1,'gghert','2020-04-27 06:41:59','2020-04-27 06:41:59'),
+(5,3,'ggfert','2020-04-27 06:53:11','2020-04-27 06:53:11'),
+(6,3,'1hhhhh','2020-04-27 06:53:22','2020-04-27 06:53:22');
 
 /*Table structure for table `applications` */
 
@@ -8764,36 +8768,39 @@ DROP TABLE IF EXISTS `applications`;
 CREATE TABLE `applications` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `productid` int(4) NOT NULL,
+  `appfamilyid` int(4) NOT NULL,
   `application` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `applications` */
 
-insert  into `applications`(`id`,`productid`,`application`,`created_at`,`updated_at`) values 
-(1,1,'CF6-80',NULL,NULL),
-(2,1,'CF6-50',NULL,NULL),
-(3,1,'CFM56 Series',NULL,NULL),
-(4,1,'GE90 Series',NULL,NULL),
-(5,1,'PW2037 Series',NULL,NULL),
-(6,2,'Trent 700',NULL,NULL),
-(7,3,'GTCP331 Series',NULL,NULL),
-(8,3,'GTE131 Series',NULL,NULL),
-(9,3,'TSCP 700 Series',NULL,NULL),
-(10,3,'PW901A',NULL,NULL),
-(11,3,'PW901C',NULL,NULL),
-(12,3,'PW980A',NULL,NULL),
-(13,3,'APS500',NULL,NULL),
-(14,3,'APS1000',NULL,NULL),
-(15,3,'APS2000',NULL,NULL),
-(16,3,'APS2300',NULL,NULL),
-(17,3,'APS3200',NULL,NULL),
-(18,3,'APS5000',NULL,NULL),
-(19,4,'A300-600R',NULL,NULL),
-(20,4,'A310-200',NULL,NULL),
-(21,10,'FK50',NULL,NULL);
+insert  into `applications`(`id`,`productid`,`appfamilyid`,`application`,`created_at`,`updated_at`) values 
+(1,1,3,'CF6-80',NULL,NULL),
+(2,1,3,'CF6-50',NULL,NULL),
+(3,1,3,'CFM56 Series',NULL,NULL),
+(4,1,4,'GE90 Series',NULL,NULL),
+(5,1,4,'PW2037 Series',NULL,NULL),
+(6,2,0,'Trent 700',NULL,NULL),
+(7,3,5,'GTCP331 Series',NULL,NULL),
+(8,3,5,'GTE131 Series',NULL,NULL),
+(9,3,5,'TSCP 700 Series',NULL,NULL),
+(10,3,5,'PW901A',NULL,NULL),
+(11,3,5,'PW901C',NULL,NULL),
+(12,3,5,'PW980A',NULL,NULL),
+(13,3,5,'APS500',NULL,NULL),
+(14,3,5,'APS1000',NULL,NULL),
+(15,3,6,'APS2000',NULL,NULL),
+(16,3,6,'APS2300',NULL,NULL),
+(17,3,6,'APS3200',NULL,NULL),
+(18,3,6,'APS5000',NULL,NULL),
+(19,4,0,'A300-600R',NULL,NULL),
+(20,4,0,'A310-200',NULL,NULL),
+(21,10,0,'FK50',NULL,NULL),
+(22,3,0,'asdfasfqqqqq','2020-04-22 16:12:57','2020-04-22 16:13:17'),
+(23,6,2,'adfasdf','2020-04-27 06:31:05','2020-04-27 06:31:05');
 
 /*Table structure for table `contacts` */
 
@@ -8810,17 +8817,23 @@ CREATE TABLE `contacts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `contacts` */
 
 insert  into `contacts`(`id`,`companyid`,`name`,`email`,`title`,`airline`,`country`,`created_at`,`updated_at`) values 
-(1,'1','MTU','mtu.maintenance@mtuzhuhai.com','MTU',NULL,NULL,'2020-03-26 15:35:05','2020-03-26 15:35:05'),
 (2,NULL,'Air 9','9air@gmail.com','manager',NULL,'China','2020-03-27 12:32:17','2020-03-27 12:32:17'),
 (4,'2','asd','geewtwr','werwer',NULL,NULL,'2020-03-27 16:38:00','2020-03-27 16:38:00'),
 (5,'2','sdgas','erwwerw','whdsv',NULL,NULL,'2020-03-27 16:38:00','2020-03-27 16:38:00'),
 (6,NULL,'Re','airforce@airfoce.com','manager','Republic of China Air Force','Taiwan, Province of China','2020-03-27 17:49:12','2020-03-27 17:49:12'),
-(7,NULL,'gasd','ewtwer@gmail.com','asdf','9 Air','China','2020-03-27 17:51:56','2020-03-27 17:51:56');
+(9,NULL,'ttrret','gggg','weqeqw','MTU Maintenance Zhuhai Co. Ltd.','China','2020-04-23 13:41:35','2020-04-23 13:41:35'),
+(10,NULL,'ttrret','gggg','weqeqw','MTU Maintenance Zhuhai Co. Ltd.','China','2020-04-23 13:44:02','2020-04-23 13:44:02'),
+(13,'Australia','hhhh','eret@gasdf','ahs',NULL,NULL,'2020-04-24 06:43:25','2020-04-24 06:43:25'),
+(14,'Australia','dfgsd','ertey','asdasdf',NULL,NULL,'2020-04-24 07:01:31','2020-04-24 07:01:31'),
+(15,NULL,'qwe','rtyrt@gdssd.com','rrtiuy','Virgin Australia','Australia','2020-04-24 07:08:10','2020-04-24 07:08:10'),
+(16,'1','dfgsd','sdfh','retrt',NULL,NULL,'2020-04-27 07:00:54','2020-04-27 07:00:54'),
+(17,NULL,'dfgsd','sdfh','ahs','Ariana Afghan Airlines','Afghanistan','2020-04-27 07:45:10','2020-04-27 07:45:10'),
+(18,NULL,'saasdf','qeqr','rrtiuy','Ariana Afghan Airlines','Afghanistan','2020-04-27 07:45:25','2020-04-27 07:45:25');
 
 /*Table structure for table `failed_jobs` */
 
@@ -8847,7 +8860,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `migrations` */
 
@@ -8860,7 +8873,9 @@ insert  into `migrations`(`id`,`migration`,`batch`) values
 (6,'2020_03_26_000000_create_applications_table',1),
 (7,'2020_03_26_000000_create_mrocompanys_table',2),
 (8,'2020_03_26_000000_create_products_table',2),
-(10,'2020_03_26_000000_create_contacts_table',3);
+(10,'2020_03_26_000000_create_contacts_table',3),
+(11,'2020_04_21_000000_create_visits_table',4),
+(12,'2020_04_27_000000_create_appfamilies_table',5);
 
 /*Table structure for table `mrocompanies` */
 
@@ -8879,7 +8894,7 @@ CREATE TABLE `mrocompanies` (
 /*Data for the table `mrocompanies` */
 
 insert  into `mrocompanies`(`id`,`company`,`country`,`applist`,`created_at`,`updated_at`) values 
-(1,'MTU Maintenance Zhuhai Co. Ltd.','China','7,8,11,12','2020-03-26 15:35:05','2020-03-27 16:29:04');
+(1,'MTU Maintenance Zhuhai Co. Ltd.','China','7,8,11','2020-03-26 15:35:05','2020-04-22 17:02:32');
 
 /*Table structure for table `password_resets` */
 
@@ -8909,8 +8924,7 @@ CREATE TABLE `products` (
 /*Data for the table `products` */
 
 insert  into `products`(`id`,`family`,`created_at`,`updated_at`) values 
-(1,'Engines','2020-03-26 20:17:38','2020-03-26 20:17:50'),
-(2,'Thrust Reversers','2020-03-26 20:17:47','2020-03-26 20:17:52'),
+(1,'Engines','2020-03-26 20:17:38','2020-04-22 15:42:50'),
 (3,'APU','2020-03-26 20:17:54','2020-03-26 20:17:55'),
 (4,'Landing Gear','2020-03-26 20:17:57','2020-03-26 20:17:58'),
 (5,'A/C Maintenance','2020-03-26 20:18:00','2020-03-26 20:18:01'),
@@ -8954,9 +8968,31 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 /*Data for the table `users` */
+
+insert  into `users`(`id`,`firstname`,`lastname`,`phone`,`email`,`email_verified_at`,`password`,`role`,`is_active`,`remember_token`,`created_at`,`updated_at`) values 
+(1,'Admin','Admin','123123123','admin@admin.com','2020-04-20 16:12:54','$2y$10$QJmgvpEOvYBzSHdZPb8hnO6aQQqBsLSAJt3cCt5LbTDD43rUCYdS.',1,'1',NULL,'2020-04-20 16:12:54','2020-04-26 20:44:53'),
+(7,'alex','zgonik','12313123','alexzgonik030303@gmail.com',NULL,'$2y$10$ftsE2dq04CwPk7D76RyxxObVzfDhwa0CghkI3guhD8FiHAnaVMzuq',0,'0',NULL,'2020-04-20 19:15:21','2020-04-20 19:15:21');
+
+/*Table structure for table `visits` */
+
+DROP TABLE IF EXISTS `visits`;
+
+CREATE TABLE `visits` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `reportowner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `attendess` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+/*Data for the table `visits` */
+
+insert  into `visits`(`id`,`reportowner`,`attendess`,`created_at`,`updated_at`) values 
+(1,'gafs','hhhh','2020-04-20 18:24:46','2020-04-20 19:06:10');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
