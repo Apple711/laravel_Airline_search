@@ -82,17 +82,8 @@
 
                                     
                                     <select class = "form-control" name = "role" requried>
-                                        @foreach ($roles as $role)
-                                            @if(Auth::user()->role == 2)
-                                           
-                                                @if($role->id == 3)
-                                                <option {{($user->role == $role->id)?"selected":""}} value= {{$role->id}}>{{$role->title}}</option>
-                                                @endif
-                                            @else
-                                                <option {{($user->role == $role->id)?"selected":""}} value= {{$role->id}}>{{$role->title}}</option>
-                                            @endif
-                                        @endforeach
-                                    
+                                        <option {{($user->role == "0")?"selected":""}} value= "0">General</option>
+                                        <option {{($user->role == "1")?"selected":""}} value= "1">Admin</option>
                                     </select>
                                     @if ($errors->has('role'))
                                         <span class="help-block">
@@ -101,7 +92,6 @@
                                     @endif
                                 </div>
                             </div>
-                            @if (Auth::user()->role == 1 && $user->role == 3)
                             <div class="form-group custom_input {{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label class="col-sm-2 control-label">Password<span class=""></span></label>
                                 <div class="col-xs-4">
@@ -120,7 +110,6 @@
                                     <input class="form-control" name="password_confirmation" type="text" placeholder="Confirm password" >
                                 </div>
                             </div>
-                            @endif
                            
                         </div>
                         <div class="box-footer">

@@ -7,6 +7,7 @@ use App\Product;
 use App\Application;
 use App\Mrocompany;
 use App\Contact;
+use App\Appfamily;
 
 class MROController extends Controller
 {

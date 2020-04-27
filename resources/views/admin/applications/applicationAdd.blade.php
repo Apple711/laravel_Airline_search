@@ -11,6 +11,7 @@
 </script>
 
 <div class="content-wrapper" style="min-height: 916px;">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
@@ -40,12 +41,19 @@
                             <div class="form-group custom_input">
                                 <label class="col-sm-2 control-label">Product Family<span class="required"></span></label>
                                  <div class="col-xs-4">
-                                    <!-- <input class="form-control" name="email" type="text" value="" placeholder="Email" required> -->
-
-                                    <select class = "form-control" name = "family" requried>
+                                    <select class = "form-control" name = "family" id="search_product_sel" requried>
+                                        <option></option>
                                         @foreach ($products as $product)
                                             <option value="{{$product->id}}">{{$product->family}}</option>
                                         @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group custom_input">
+                                <label class="col-sm-2 control-label">Application Family<span class="required"></span></label>
+                                 <div class="col-xs-4">
+                                    <select class = "form-control" name = "appfamily" id = "appfamily_sel" requried>
+                                        <option></option>
                                     </select>
                                 </div>
                             </div>
@@ -65,5 +73,32 @@
     </section>
     <!-- /.content -->
 </div>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $("#search_product_sel").change(function(){
+        var id = $("#search_product_sel").val();
+        $.ajax({
+            type:'POST',
+            url:'/getAppfamily',
+            data:{id: id},
+            beforeSend: function(){
+                var xml = '<option></option';    
+                $('#appfamily_sel').html(xml);
+            },
+            success:function(data){
+                var xml = '';
+                data.appfamily.forEach(function(element, index) {
+                    xml = xml + '<option value="' + element.id + '">' + element.appfamily + '</option>';
+                });
+                $("#appfamily_sel").append(xml);
+            }
+        });
+    })
 
+    
+</script>
 @endsection

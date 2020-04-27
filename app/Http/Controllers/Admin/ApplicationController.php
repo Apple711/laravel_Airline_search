@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Product;
 use App\Application;
+use App\Appfamily;
 
 class ApplicationController extends Controller
 {
@@ -20,7 +21,8 @@ class ApplicationController extends Controller
     public function index(){
         $applications = DB::table('applications');
         $applications = $applications->join('products', 'applications.productid', '=', 'products.id');
-        $applications = $applications->select('applications.*', 'products.family');
+        $applications = $applications->join('appfamilies', 'applications.appfamilyid', '=', 'appfamilies.id');
+        $applications = $applications->select('applications.*', 'products.family', 'appfamilies.appfamily');
         $applications = $applications ->paginate(15);
         return view('admin.applications.index', compact('applications'));
     }
@@ -35,6 +37,7 @@ class ApplicationController extends Controller
     {
         $applications = new Application();
         $applications->productid = $request['family'];
+        $applications->appfamilyid = $request['appfamily'];
         $applications->application = $request['application'];
         $applications->save();
         return redirect('admin/applications');
@@ -50,13 +53,15 @@ class ApplicationController extends Controller
     {
         $application = Application::find($id);
         $products = Product::all();
-        return view('admin.applications.applicationEdit', compact('application', 'products'));
+        $appfamily = Appfamily::where('productid', '=', $application->productid)->get();
+        return view('admin.applications.applicationEdit', compact('application', 'products', 'appfamily'));
     }
 
     public function update(Request $request, $id)
     {
         $application = Application::findOrFail($id);
         $application->productid = $request['family'];
+        $application->appfaimlyid = $request['appfaimly'];
         $application->application = $request['application'];
         $application->save();
         return redirect('admin/applications');

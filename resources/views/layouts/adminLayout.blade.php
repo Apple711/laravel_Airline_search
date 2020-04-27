@@ -94,6 +94,7 @@
   @php     
     $menu_name = $admin_helper->getAdminMenuName();
     $user = ($menu_name == 'users' || $menu_name == 'roles' ) ? true :false;
+    $setting = ($menu_name == 'products' || $menu_name == 'appfamily' || $menu_name == 'applications' ) ? true :false;
   @endphp
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
@@ -109,7 +110,7 @@
             </a>
             <ul class="treeview-menu {{$user ? 'menu-open' : ''}}">
               <li @if($menu_name == 'users') class="active" @endif><a href="{{url('/admin/users')}}"><i class="fa fa-circle-o"></i> User Management</a></li>
-              <li @if($menu_name == 'visit') class="active" @endif><a href="{{url('/admin/visit')}}"><i class="fa fa-circle-o"></i> Visit Report</a></li>
+              {{-- <li @if($menu_name == 'visit') class="active" @endif><a href="{{url('/admin/visit')}}"><i class="fa fa-circle-o"></i> Visit Report</a></li> --}}
             </ul>
           </li>
         @endif
@@ -117,15 +118,16 @@
         <li><a href="{{url('/Airline')}}"><i class="fa fa-dollar"></i> <span>AIRLINE MANAGEMENT</span></a></li>
         @if(Auth::user()->role == 1)
         <li><a href="{{url('/upload')}}"><i class="fa fa-dollar"></i> <span>UPLOAD FLEET</span></a></li>
-        <li class="treeview {{$user ? 'active' : ''}}">
+        <li class="treeview {{$setting ? 'active' : ''}}">
           <a href="#">
             <i class="fa fa-edit"></i> <span>SETTING</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu {{$user ? 'menu-open' : ''}}">
+          <ul class="treeview-menu {{$setting ? 'menu-open' : ''}}">
             <li @if($menu_name == 'products') class="active" @endif><a href="{{url('/admin/products')}}"><i class="fa fa-circle-o"></i> PRODUCT Management</a></li>
+            <li @if($menu_name == 'appfamily') class="active" @endif><a href="{{url('/admin/appfamily')}}"><i class="fa fa-circle-o"></i> APPLICATION FAMILY MANAGEMENT</a></li>
             <li @if($menu_name == 'applications') class="active" @endif><a href="{{url('/admin/applications')}}"><i class="fa fa-circle-o"></i> APPLICATION MANAGEMENT</a></li>
           </ul>
         </li>

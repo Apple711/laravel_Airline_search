@@ -37,14 +37,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('admin/users', 'Admin\UserController');
     Route::get('admin/users/delete/{id}', 'Admin\UserController@destroy');
     Route::post('admin/users/setactive', 'Admin\UserController@setactive');
-
+    // home routes
     Route::get("/home", 'Admin\HomeController@index');
     Route::post("/search/load_content", 'Admin\HomeController@search')->name('search.content');
+    Route::post("/getAppfamily", 'Admin\HomeController@getAppfamily');
+    Route::post("/getApplication", 'Admin\HomeController@getApplication');
 
     //Mro Company Routes
     Route::get("/MRO", 'MROController@index');
     Route::get("/mro/create", 'MROController@create');
     Route::post("/mro/getApplication", 'MROController@getApplication');
+    
     Route::post("/mro/store", 'MROController@store');
     Route::get('/mro/delete/{id}', 'MROController@destroy');
     Route::get('/mro/{id}/edit', 'MROController@edit');
@@ -62,9 +65,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Contact Routes
     Route::resource('contacts', 'ContactController');
-    Route::get('/contacts/{id}/{type}/edit', 'ContactController@edit');
+    Route::get('/contacts/{id}/{company_name}/{type}/edit', 'ContactController@edit');
     Route::post('/contact/delete', 'ContactController@destroy');
-    Route::post('/contacts/update/{id}/{type}', 'ContactController@store');
+    Route::post('/contacts/update/{id}/{company_name}/{type}', 'ContactController@store');
 
     //admin visit report
     Route::resource('/admin/visit', 'Admin\VisitReportController');
@@ -75,5 +78,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('admin/applications', 'Admin\ApplicationController');
     Route::get('admin/applications/delete/{id}', 'Admin\ApplicationController@destroy');
+
+    // application family routes
+    Route::resource('admin/appfamily', 'Admin\ApplicationFamilyController');
+    Route::get('admin/appfamily/delete/{id}', 'Admin\ApplicationFamilyController@destroy');
   
 });

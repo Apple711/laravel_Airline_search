@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateApplicationsTable extends Migration
+class CreateAppFamiliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateApplicationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
+        Schema::create('appfamilies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('productid');
-            $table->integer('appfamilyid');
-            $table->string('application');
+            $table->string('appfamily');
             $table->timestamps();
         });
     }

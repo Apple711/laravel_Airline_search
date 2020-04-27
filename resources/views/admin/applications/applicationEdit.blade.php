@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-           Edit Products
+           Edit Application
         </h1>
        
     </section>
@@ -46,7 +46,7 @@
                             <div class="form-group custom_input {{ $errors->has('products') ? ' has-error' : '' }}">
                                 <label class="col-sm-2 control-label">Product Family<span class="required"></span></label>
                                  <div class="col-xs-4">
-                                    <select class = "form-control" name = "family" requried>
+                                    <select class = "form-control" name = "family" id="search_product_sel" requried>
                                         @foreach ($products as $product)
                                             <option {{($application->productid == $product->id)?"selected":""}} value= {{$product->id}}>{{$product->family}}</option>
                                         @endforeach
@@ -55,6 +55,22 @@
                                     @if ($errors->has('products'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('products') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="form-group custom_input {{ $errors->has('appfamily') ? ' has-error' : '' }}">
+                                <label class="col-sm-2 control-label">Application Family<span class="required"></span></label>
+                                 <div class="col-xs-4">
+                                    <select class = "form-control" name = "appfamily" id = "appfamily_sel" requried>
+                                        @foreach ($appfamily as $item)
+                                            <option {{($application->appfamilyid == $item->id)?"selected":""}} value= {{$item->id}}>{{$item->appfamily}}</option>
+                                        @endforeach
+                                    
+                                    </select>
+                                    @if ($errors->has('appfamily'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('appfamily') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -74,5 +90,32 @@
     </section>
     <!-- /.content -->
 </div>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $("#search_product_sel").change(function(){
+        var id = $("#search_product_sel").val();
+        $.ajax({
+            type:'POST',
+            url:'/getAppfamily',
+            data:{id: id},
+            beforeSend: function(){
+                var xml = '<option></option';    
+                $('#appfamily_sel').html(xml);
+            },
+            success:function(data){
+                var xml = '';
+                data.appfamily.forEach(function(element, index) {
+                    xml = xml + '<option value="' + element.id + '">' + element.appfamily + '</option>';
+                });
+                $("#appfamily_sel").append(xml);
+            }
+        });
+    })
 
+    
+</script>
 @endsection
