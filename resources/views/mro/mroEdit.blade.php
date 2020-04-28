@@ -73,7 +73,7 @@
 
                     <div class="form-group custom_input">
                         <div class="compatiable col-md-12">
-                            <h4 class="form-section">COMPATIABLES</h4>
+                            <h4 class="form-section">CAPABILITIES</h4>
                             <div class="form-group">
                                 <label class="control-label col-md-3">PRODUCT FAMILY</label>
                                 <div class="col-md-4">

@@ -40,15 +40,24 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $user = new User();
-        $user->firstname = $request['firstname'];
-        $user->lastname = $request['lastname'];
-        $user->email = $request['email'];
-        $user->phone = $request['phone'];
-        $user->role = $request['role'];
-        $user->password = bcrypt($request['password']);
-        $user->save();
-        return redirect('admin/users');
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email',
+            'password' => 'required|string|min:6'
+        ]);
+        if ($validator->passes()) {
+            $user = new User();
+            $user->firstname = $request['firstname'];
+            $user->lastname = $request['lastname'];
+            $user->email = $request['email'];
+            $user->phone = $request['phone'];
+            $user->role = $request['role'];
+            $user->password = bcrypt($request['password']);
+            $user->save();
+            return redirect('admin/users');
+        } else {
+            return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
+        }
+        
 
     }
 

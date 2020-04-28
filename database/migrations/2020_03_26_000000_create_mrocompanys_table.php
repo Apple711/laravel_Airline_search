@@ -18,6 +18,7 @@ class CreateMroCompaniesTable extends Migration
             $table->string('company');
             $table->string('country');
             $table->string('applist');
+            $table->string('appfamilylist');
             $table->timestamps();
         });
     }

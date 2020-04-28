@@ -81,7 +81,7 @@
                         <div style="height:300px;overflow-y: scroll;">                                        
                             <table id="total_list" class="table" role="grid" aria-describedby="example1_info" >
                                 <thead>
-                                    <tr colspan = "2" > FLEET INFOR SUMMARY</tr>
+                                    <tr colspan = "2" > FLEET INFO SUMMARY</tr>
                                     <tr>
                                         <td>AIRCRAFT</td>
                                         <td>TOTAL</td>

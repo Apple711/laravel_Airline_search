@@ -42,16 +42,26 @@
                                     <input class="form-control" name="lastname" type="text" value="" placeholder="Last Name" required>
                                 </div>
                             </div>
-                            <div class="form-group custom_input">
+                            <div class="form-group custom_input {{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label class="col-sm-2 control-label">Email<span class="required"></span></label>
                                  <div class="col-xs-4">
                                     <input class="form-control" name="email" type="text" value="" placeholder="Email" required>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
-                            <div class="form-group custom_input">
+                            <div class="form-group custom_input {{ $errors->has('password') ? ' has-error' : '' }}">
                                 <label class="col-sm-2 control-label">Password<span class="required"></span></label>
-                                 <div class="col-xs-4">
+                                <div class="col-xs-4">
                                     <input class="form-control" name="password" type="text" value="" placeholder="Password" required>
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group custom_input">

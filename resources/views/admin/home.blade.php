@@ -127,6 +127,8 @@
                 $("#app_sel").append(xml);
             }
         });
+
+        get_result();
     })
 
     $("#app_sel").change(function(){

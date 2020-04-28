@@ -42,7 +42,7 @@
                     @endif
                 @else
                     @php
-                        $duplicate_flag = true;
+                        $duplicate_flag = false;
                     @endphp
                 @endif
                 @if (!$duplicate_flag)
@@ -53,7 +53,7 @@
                         <td class=" ">{{$tr->title }}</td>
                         <td class=" ">{{$product->family}}</td>
                         <td class=" ">{{$appfamily->appfamily}}</td>
-                        <td class=" ">{{$application->application}}</td>
+                        <td class=" ">{{($application) ? $application->application : ""}}</td>
                         <td class=" "></td>
                         <td class=" ">{{$customer_type=='airline' ? 'Airline' : 'MRO'}}</td>
                         <td><a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a></td>
@@ -94,7 +94,7 @@
                             <td class=" ">{{$tr->title}}</td>
                             <td class=" ">{{$product->family}}</td>
                             <td class=" ">{{$appfamily->appfamily}}</td>
-                            <td class=" ">{{$application->application}}</td>
+                            <td class=" ">{{(isset($application)) ? $application->application : ""}}</td>
                             <td class=" "></td>
                             <td class=" ">Airline</td>
                             <td><a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a></td>

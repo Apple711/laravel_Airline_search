@@ -61,7 +61,7 @@ class ApplicationController extends Controller
     {
         $application = Application::findOrFail($id);
         $application->productid = $request['family'];
-        $application->appfaimlyid = $request['appfaimly'];
+        $application->appfamilyid = $request['appfamily'];
         $application->application = $request['application'];
         $application->save();
         return redirect('admin/applications');

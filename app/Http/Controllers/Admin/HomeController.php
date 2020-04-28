@@ -28,32 +28,48 @@ class HomeController extends Controller
 
         $product = Product::where('id','=',$product_id)->get()->first();
         $appfamily = Appfamily::where('id','=',$appfamily_id)->get()->first();
-        $application = Application::where('id','=',$application_id)->get()->first();
-        $applist = $application->application;
+        $application = "";
+        if ($application_id){
+            $application = Application::where('id','=',$application_id)->get()->first();
+            $applist = $application->application;
+        }else{
+            $applist = $appfamily->appfamily;
+        }
+        
+        
         if ( $customer_type == "mro" ){
-            $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('applist', 'like', '%,'.$application_id.',%')->get();
+            if ($application_id){
+                $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('applist', 'like', '%'.$application_id.',%')->get();
+            }else{
+                $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('appfamilylist', 'like', '%'.$appfamily_id.',%')->get();
+            }
             
-
             return ['content' => (string)view('admin.result_view')->with(compact('results', 'product', 'appfamily', 'application', 'customer_type'))];
         }elseif ( $customer_type == "airline" ){
-            $results = Airline::leftjoin('contacts','contacts.airline','airlines.operator')->select('airlines.country', 'airlines.operator','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->where(function($query) use ($applist){
-                $query->where('airlines.aircraftSeries', 'LIKE', '%'.$applist.'%');
+            $results = Airline::leftjoin('contacts','contacts.airline','airlines.operator')->select('airlines.country', 'airlines.operator','airlines.aircraftFamily','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->where(function($query) use ($applist){
+                $query->where('airlines.aircraftFamily', 'LIKE', '%'.$applist.'%');
+                $query->orwhere('airlines.aircraftSeries', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.engineType', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.engineModel', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.apuModel', 'LIKE', '%'.$applist.'%');
-            })->groupby('airlines.country', 'airlines.operator','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->get();
+            })->groupby('airlines.country', 'airlines.operator','airlines.aircraftFamily','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->get();
 
             
             return ['content' => (string)view('admin.result_view')->with(compact('results', 'product', 'appfamily', 'application', 'customer_type'))];
         }elseif ( $customer_type == "all" ){
-            $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('applist', 'like', '%,'.$application_id.',%')->get();
+            if ($application_id){
+                $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('applist', 'like', '%'.$application_id.',%')->get();
+            }else{
+                $results = Mrocompany::leftjoin('contacts','contacts.companyid','mrocompanies.id')->select('mrocompanies.*','contacts.email' , 'contacts.title')->where('appfamilylist', 'like', '%'.$appfamily_id.',%')->get();
+            }
 
-            $airline_results = Airline::leftjoin('contacts','contacts.airline','airlines.operator')->select('airlines.country', 'airlines.operator','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->where(function($query) use ($applist){
-                $query->where('airlines.aircraftSeries', 'LIKE', '%'.$applist.'%');
+            $airline_results = Airline::leftjoin('contacts','contacts.airline','airlines.operator')->select('airlines.country', 'airlines.operator','airlines.aircraftFamily','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->where(function($query) use ($applist){
+                $query->where('airlines.aircraftFamily', 'LIKE', '%'.$applist.'%');
+                $query->orwhere('airlines.aircraftSeries', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.engineType', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.engineModel', 'LIKE', '%'.$applist.'%');
                 $query->orWhere('airlines.apuModel', 'LIKE', '%'.$applist.'%');
-            })->groupby('airlines.country', 'airlines.operator','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->get();
+            })->groupby('airlines.country', 'airlines.operator','airlines.aircraftFamily','airlines.aircraftSeries','airlines.engineType','airlines.engineModel','airlines.apuModel','contacts.email','contacts.title')->get();
             
             return ['content' => (string)view('admin.result_view')->with(compact('results', 'airline_results', 'product', 'appfamily', 'application', 'customer_type'))];
         }

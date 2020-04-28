@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Airline</title>
+  <title>SmartRFP</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -144,7 +144,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0.0
     </div>
-    <strong>Copyright &copy; 2020 <a href="#">Search</a>.</strong> All rights
+    <strong>Copyright &copy; 2020 <a href="#">SmartRFP</a>.</strong> All rights
     reserved.
   </footer>
 

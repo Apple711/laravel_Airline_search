@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin_IPBUD</title>
+  <title>SmartRFP</title>
   
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="icon" type="image/png" href="{{asset('assets/images/fav_ico.png')}}">
@@ -25,7 +25,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="/">MRO</a>
+    <a href="/">SmartRFP</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

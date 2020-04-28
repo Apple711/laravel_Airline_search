@@ -62,8 +62,9 @@
                                                         <td class=" ">{{$tr->created_at }}</td>
 
                                                         <td class="center ">
-                                                            <a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a>                                                       
-                                                            <a href="{{ url('/mro/delete/'.$tr->id)}}" data-method="delete" class="btn btn-danger btn-xs delete"><i class="fa fa-trash "></i> Delete</a>
+                                                            <a onclick="edit($(this))" class="btn btn-primary btn-xs edit"><i class="fa fa-edit "></i> Edit</a>                                     @if(Auth::user()->role == 1)                  
+                                                                <a href="{{ url('/mro/delete/'.$tr->id)}}" data-method="delete" class="btn btn-danger btn-xs delete"><i class="fa fa-trash "></i> Delete</a>
+                                                            @endif
                                                         </td>
                                                     </tr>
                                                 @endforeach
