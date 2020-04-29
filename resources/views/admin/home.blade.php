@@ -26,12 +26,12 @@
                 <div class="form-group">
                     <label class="control-label col-md-3" for="inputWarning">CUSTOMER TYPE</label>
                     <div class="btn-group btn-group-devided" data-toggle="buttons">
-                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                            <input type="radio" name="options" class="toggle" id="all">ALL</label>
-                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                            <input type="radio" name="options" class="toggle" id="mro">MRO</label>
-                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                            <input type="radio" name="options" class="toggle" id="airline">AIRLINE</label>
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm {{($company_type=="all" || $company_type=="") ?"active":""}}">
+                            <input type="radio" name="options" class="toggle" id="all" {{($company_type=="all")?"checked":""}}>ALL</label>
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm {{($company_type=="mro")?"active":""}}">
+                            <input type="radio" name="options" class="toggle" id="mro" {{($company_type=="mro")?"checked":""}}>MRO</label>
+                        <label class="btn btn-transparent dark btn-outline btn-circle btn-sm {{($company_type=="airline")?"active":""}}">
+                            <input type="radio" name="options" class="toggle" id="airline" {{($company_type=="airline")?"checked":""}}>AIRLINE</label>
                         
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         <select class="form-control" id="search_product_sel" name="search_product_sel">
                             <option></option>
                             @foreach ($products as $product)
-                                <option value="{{$product->id}}">{{$product->family}}</option>
+                                <option {{($product->id == $current_product)?"selected":""}} value="{{$product->id}}">{{$product->family}}</option>
                             @endforeach
                         </select>
                     </div>
@@ -51,6 +51,11 @@
                     <div class="col-md-4">
                         <select class="form-control" id="appfamily_sel" name="appfamily_sel">
                             <option></option>
+                            @if ($current_appfamily)
+                                @foreach ($appfamily as $item)
+                                    <option {{($item->id == $current_appfamily)?"selected":""}} value="{{$item->id}}">{{$item->appfamily}}</option>
+                                @endforeach
+                            @endif
                         </select>
                     </div>
                 </div>
@@ -59,6 +64,11 @@
                     <div class="col-md-4">
                         <select class="form-control" id="app_sel" name="app_sel">
                             <option></option>
+                            @if ($current_application || $current_appfamily )
+                                @foreach ($applications as $application)
+                                    <option {{($application->id == $current_application)?"selected":""}} value="{{$application->id}}">{{$application->application}}</option>
+                                @endforeach
+                            @endif
                         </select>
                     </div>
                 </div>
@@ -86,6 +96,7 @@
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+    get_result();
     $("#search_product_sel").change(function(){
         var id = $("#search_product_sel").val();
         $.ajax({

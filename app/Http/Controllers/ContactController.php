@@ -7,10 +7,13 @@ use App\Contact;
 use App\Mrocompany;
 use App\Airline;
 use App\Product;
+use App\Appfamily;
+use App\Application;
 
 class ContactController extends Controller
 {
     //
+    
     public function destroy(Request $request)
     {
         $id = $request['id'];
@@ -19,7 +22,7 @@ class ContactController extends Controller
         return "true";
     }
 
-    public function edit($id, $company_name, $type)
+    public function edit($id, $company_name, $type,$p_id, $af_id, $ap_id, $c_type)
     {
         if ($type == "MRO"){
             $contacts = Contact::where('companyid', '=', $id)->get();
@@ -30,7 +33,13 @@ class ContactController extends Controller
         $company['id'] = $id;
         $company['type'] = $type;
         $company['name'] = $company_name;
-        return view('contactEdit', compact('company', 'contacts'));
+
+        $current_product = $p_id;
+        $current_appfamily = $af_id;
+        $current_application = $ap_id;
+        $company_type = $c_type;
+        
+        return view('contactEdit', compact('company', 'contacts', 'current_product', 'current_appfamily', 'current_application','company_type'));
     }
 
     public function store(Request $request, $id, $company_name, $type){
@@ -65,6 +74,13 @@ class ContactController extends Controller
             }
         }
         
-        return redirect('/');
+        $products = Product::all();
+        $current_product = $request['current_product'];
+        $appfamily = Appfamily::where('productid','=',$current_product)->get();
+        $current_appfamily = $request['current_appfamily'];
+        $applications = Application::where('appfamilyid','=',$current_appfamily)->get();
+        $current_application = $request['current_application']=="null" ? "" : $request['current_application'];
+        $company_type = $request['company_type'];
+        return view("admin.home", compact('products','current_product','appfamily','current_appfamily','applications','current_application','company_type'));
     }
 }

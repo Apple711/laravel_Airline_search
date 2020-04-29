@@ -17,7 +17,11 @@ class HomeController extends Controller
     //
     public function index(){
         $products = Product::all();
-        return view("admin.home", compact('products'));
+        $current_product = "";
+        $current_appfamily = "";
+        $current_application = "";
+        $company_type = "";
+        return view("admin.home", compact('products','current_product','current_appfamily','current_application','company_type'));
     }
 
     public function search(Request $request){

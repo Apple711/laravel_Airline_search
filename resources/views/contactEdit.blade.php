@@ -54,9 +54,9 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <tbody>
                                 <tr>
-                                    <td><input tyep="text" id="contact_name" /></td>
-                                    <td><input tyep="text" id="contact_email" /></td>
-                                    <td><input tyep="text" id="contact_title" /></td>
+                                    <td><input type="text" id="contact_name" /></td>
+                                    <td><input type="text" id="contact_email" /></td>
+                                    <td><input type="text" id="contact_title" /></td>
                                     <td><button class="btn btn-default pull-right add-row"><i class="fa fa-plus"></i>&nbsp;&nbsp; Add Row</button></td>
                                 </tr>
                             </tbody>
@@ -66,6 +66,10 @@
                     
                 </div>
             </div>
+            <input type="hidden" name="current_product" value="{{$current_product}}"/>
+            <input type="hidden" name="current_appfamily" value="{{$current_appfamily}}"/>
+            <input type="hidden" name="current_application" value="{{$current_application}}"/>
+            <input type="hidden" name="company_type" value="{{$company_type}}"/>
             <div class="box-footer">
                 <!--<button type="submit" class="btn btn-default">Cancel</button>-->
                 <button type="submit" class="btn btn-info save_button">Save</button>

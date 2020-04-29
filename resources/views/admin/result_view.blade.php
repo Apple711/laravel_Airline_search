@@ -144,8 +144,22 @@
         var id = obj.parent().parent().attr("item_id");
         var type = obj.parent().parent().find(':nth-child(9)')[0].innerText;
         company_name = obj.parent().parent().find(':nth-child(2)')[0].innerText;
+
+        var customer_type = "all";
+        $('input[name=options]').each(function() {
+            if($(this).is(':checked')) {
+                customer_type = $(this).attr('id');
+            } 
+        });
+
+        var product_id = $("#search_product_sel").val();
+        var appfamily_id = $("#appfamily_sel").val();
+        var application_id = $("#app_sel").val();
+        if (application_id == "") {
+            application_id = "null";
+        }
         var url = "{{ url('/contacts') }}";
-        location.href=url + "/" + id + "/" + company_name + "/" + type + "/edit";
+        location.href=url + "/" + id + "/" + company_name + "/" + type + "/" + product_id + "/" + appfamily_id + "/" + application_id + "/" + customer_type + "/edit";
         
     }
 
