@@ -66,6 +66,7 @@ Route::group(['middleware' => 'auth'], function () {
     //Contact Routes
     Route::resource('contacts', 'ContactController');
     Route::get('/contacts/{id}/{company_name}/{type}/{p_id}/{af_id}/{ap_id}/{c_type}/edit', 'ContactController@edit');
+    Route::get('/contacts/{p_id}/{af_id}/{ap_id}/{c_type}/back', 'ContactController@back');
     Route::post('/contact/delete', 'ContactController@destroy');
     Route::post('/contacts/update/{id}/{company_name}/{type}', 'ContactController@store');
 

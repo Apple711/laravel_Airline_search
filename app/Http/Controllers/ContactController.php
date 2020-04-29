@@ -83,4 +83,15 @@ class ContactController extends Controller
         $company_type = $request['company_type'];
         return view("admin.home", compact('products','current_product','appfamily','current_appfamily','applications','current_application','company_type'));
     }
+
+    public function back($p_id, $af_id, $ap_id, $c_type){
+        $products = Product::all();
+        $current_product = $p_id;
+        $appfamily = Appfamily::where('productid','=',$current_product)->get();
+        $current_appfamily = $af_id;
+        $applications = Application::where('appfamilyid','=',$current_appfamily)->get();
+        $current_application = $ap_id=="null" ? "" : $ap_id;
+        $company_type = $c_type;
+        return view("admin.home", compact('products','current_product','appfamily','current_appfamily','applications','current_application','company_type'));
+    }
 }

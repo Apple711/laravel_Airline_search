@@ -132,7 +132,13 @@
     }
 
     $(".back_button").click(function(){
-        location.href = "{{URL::to('/')}}"
+        var product_id = $("input[name=current_product]").val();
+        var appfamily_id = $("input[name=current_appfamily]").val();
+        var application_id = $("input[name=current_application]").val();
+        var customer_type = $("input[name=company_type]").val();
+
+        var url = "{{ url('/contacts') }}";
+        location.href=url + "/" + product_id + "/" + appfamily_id + "/" + application_id + "/" + customer_type + "/back";
     });
 </script>
 @endsection
