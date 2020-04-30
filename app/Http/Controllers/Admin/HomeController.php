@@ -131,14 +131,14 @@ class HomeController extends Controller
     public function getAppfamily(Request $request)
     {
         $id = $request['id'];
-        $appfamily = Appfamily::where('productid','=',$id)->get();
+        $appfamily = Appfamily::where('productid','=',$id)->orderby('appfamily')->get();
         return ['appfamily' => $appfamily];
     }
 
     public function getApplication(Request $request)
     {
         $id = $request['id'];
-        $applications = Application::where('appfamilyid','=',$id)->get();
+        $applications = Application::where('appfamilyid','=',$id)->orderby('application')->get();
         return ['applications' => $applications];
     }
     
