@@ -56,19 +56,25 @@ class MROController extends Controller
         $company->company = $request['company'];
         $company->country = $request['country'];
         $appLists = $request['app_list'];
-        foreach ( $appLists as $key=>$applist ){
-            $temp.= $applist.",";
-            $result = Application::where('id','=',$applist)->get()->first();
-            if ($key==0){
-                $familytemp = $result->appfamilyid.",";
-                $pre_familylist = $result->appfamilyid;
-            }else{
-                if ($pre_familylist != $result->appfamilyid){
-                    $familytemp.= $result->appfamilyid.",";
+        if ($appLists){
+            foreach ( $appLists as $key=>$applist ){
+                $temp.= $applist.",";
+                $result = Application::where('id','=',$applist)->get()->first();
+                if ($key==0){
+                    $familytemp = $result->appfamilyid.",";
+                    $pre_familylist = $result->appfamilyid;
+                }else{
+                    if ($pre_familylist != $result->appfamilyid){
+                        $familytemp.= $result->appfamilyid.",";
+                    }
+                    $pre_familylist = $result->appfamilyid;
                 }
-                $pre_familylist = $result->appfamilyid;
             }
+        }else{
+            $temp = "";
+            $familytemp = "";
         }
+        
         $company->applist = $temp;
         $company->appfamilylist = $familytemp;
         $company->save();
@@ -101,19 +107,25 @@ class MROController extends Controller
         $company->company = $request['company'];
         $company->country = $request['country'];
         $appLists = $request['app_list'];
-        foreach ( $appLists as $key=>$applist ){
-            $temp.= $applist.",";
-            $result = Application::where('id','=',$applist)->get()->first();
-            if ($key==0){
-                $familytemp = $result->appfamilyid.",";
-                $pre_familylist = $result->appfamilyid;
-            }else{
-                if ($pre_familylist != $result->appfamilyid){
-                    $familytemp.= $result->appfamilyid.",";
+        if($appLists){
+            foreach ( $appLists as $key=>$applist ){
+                $temp.= $applist.",";
+                $result = Application::where('id','=',$applist)->get()->first();
+                if ($key==0){
+                    $familytemp = $result->appfamilyid.",";
+                    $pre_familylist = $result->appfamilyid;
+                }else{
+                    if ($pre_familylist != $result->appfamilyid){
+                        $familytemp.= $result->appfamilyid.",";
+                    }
+                    $pre_familylist = $result->appfamilyid;
                 }
-                $pre_familylist = $result->appfamilyid;
             }
+        }else{
+            $temp = "";
+            $familytemp = "";
         }
+        
         $company->applist = $temp;
         $company->appfamilylist = $familytemp;
         $company->save();
