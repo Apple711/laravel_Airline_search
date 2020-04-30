@@ -18,7 +18,7 @@
                 <div class="form-group custom_input">
                     <label class="col-sm-2 control-label">Company<span class="required">*</span></label>
                     <div class="col-xs-4">
-                        <input class="form-control" name="company" type="text" value="{{ $company['name'] }}">
+                        <input class="form-control" name="company" type="text" readonly value="{{ $company['name'] }}">
                     </div>
                 </div>
                 
