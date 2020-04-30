@@ -178,5 +178,9 @@
             obj.parent().parent().remove();
         }
     }
+
+    $(".back_button").click(function(){
+        location.href = "{{URL::to('MRO')}}"
+    });
 </script>
 @endsection
